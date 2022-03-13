@@ -385,11 +385,35 @@ template {
 }
 
 @font-face {
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-family: "";
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff");
+  src: url("../../fonts/Montserrat-Regular.woff2") format("woff2"), url("../../fonts/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../fonts/Montserrat-Medium.woff2") format("woff2"), url("../../fonts/Montserrat-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat Semibold";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../../fonts/Montserrat-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../fonts/Montserrat-Bold.woff2") format("woff2"), url("../../fonts/Montserrat-Bold.woff") format("woff");
 }
 
 *,
@@ -610,9 +634,21 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1160px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 103px;
+}
+
+.page-body {
+  max-width: 1366px;
+  margin: 0;
+  font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 400;
+  color: #011c40;
+  background-color: #d0e0ee;
 }
 
 .btn {
@@ -622,7 +658,7 @@ button,
   margin: 10px 0;
   padding: 10px 20px;
   color: #ffffff;
-  background-color: #2c39f2;
+  background-color: #88d0ed;
   border: none;
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
@@ -631,7 +667,7 @@ button,
 }
 
 .btn--red {
-  background-color: #ff1553;
+  background-color: red;
 }
 
 .btn:disabled {
@@ -765,21 +801,21 @@ button,
   }
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 1159px) {
   .container {
-    padding: 0 32px;
+    padding: 0 83px;
   }
 }
 
 @media (max-width: 1023px) {
   .container {
-    padding: 0 24px;
+    padding: 0 64px;
   }
 }
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 16px;
+    padding: 0 45px;
   }
 
   .modal__wrapper {
@@ -793,5 +829,17 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+}
+
+@media (max-width: 479px) {
+  .container {
+    padding: 0 23px;
+  }
+}
+
+@media (max-width: 415px) {
+  .container {
+    padding: 0 15px;
   }
 }

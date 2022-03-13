@@ -4,22 +4,47 @@
   }
 }
 
+@mixin font-group($size, $height) {
+  font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+  font-style: normal;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 400;
+}
+
+@mixin font-group-medium($size, $height) {
+  font-family: "Montserrat Medium", "Trebuchet MS", Helvetica, sans-serif;
+  font-style: normal;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 500;
+}
+
+@mixin font-group-semibold($size, $height) {
+  font-family: "Montserrat Semibold", "Trebuchet MS", Helvetica, sans-serif;
+  font-style: normal;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 600;
+}
+
+@mixin font-group-bold($size, $height) {
+  font-family: "Montserrat Bold", "Trebuchet MS", Helvetica, sans-serif;
+  font-style: normal;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 700;
+}
+
+@mixin font-group-small($size, $height) {
+  font-size: $size;
+  line-height: $height;
+}
+
 // Desktop first
 
-@mixin vp-1919 {
-  @media (max-width: $vp-1920 - 1) {
-    @content;
-  }
-}
-
-@mixin vp-1439 {
-  @media (max-width: $vp-1440 - 1) {
-    @content;
-  }
-}
-
-@mixin vp-1279 {
-  @media (max-width: $vp-1280 - 1) {
+@mixin vp-1159 {
+  @media (max-width: $vp-1160 - 1) {
     @content;
   }
 }
@@ -36,8 +61,14 @@
   }
 }
 
-@mixin vp-374 {
-  @media (max-width: $vp-375 - 1) {
+@mixin vp-479 {
+  @media (max-width: $vp-480 - 1) {
+    @content;
+  }
+}
+
+@mixin vp-415 {
+  @media (max-width: $vp-416 - 1) {
     @content;
   }
 }
