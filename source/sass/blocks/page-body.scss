@@ -1,9 +1,7 @@
 .page-body {
   max-width: 1366px;
-  margin: 0;
+  margin: 0 auto;
 
   @include font-group($size-18, $line-150);
   color: $color-tangaroa;
-
-  background-color: $color-pattens-blue;
 }

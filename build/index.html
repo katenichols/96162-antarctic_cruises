@@ -22,41 +22,52 @@
   </head>
 
   <body class="page-body">
-    <svg style="display: none;">
-    </svg>
     <div class="wrapper">
-      <header class="page-header">
-        <div class="container">
-          <div class="page-header__wrapper">
-            <picture>
+      <header class="page-header page-header--no-js" data-header-mobile>
+        <div class="container container--no-js" data-container-nojs>
+          <div class="page-header__wrapper page-header__wrapper--no-js" data-header-wrapper>
+            <picture class="page-header__picture" data-header-picture>
               <source
-                media="(min-width: 767px)"
+                media="(maxn-width: 728px)"
                 srcset="img/svg/logo-mobile.svg"/>
               <source
-                media="(max-width: 768px)"
+                media="(max-width: 1024px)"
                 srcset="img/svg/logo-tablet.svg"/>
               <img
-                class="logo__image"
+                class="page-header__logo logo"
                 src="img/svg/logo-desktop.svg"
                 width="70"
                 height="38"
-                alt="Круизы в Антарктику"
-                area-label="Круизы в Антарктику"
-                tabindex="0"/>
+                alt="Круизы в Антарктику"/>
             </picture>
-            <nav class="page-header__nav nav">
-              <ul class="nav__list">
+            <picture class="page-header__picture-no-js" data-header-picture-nojs>
+              <source
+                media="(max-width: 728px)"
+                srcset="img/svg/logo-nav-mobile.svg"/>
+              <source
+                media="(max-width: 1024px)"
+                srcset="img/svg/logo-tablet.svg"/>
+              <img
+                class="page-header__logo logo"
+                src="img/svg/logo-desktop.svg"
+                width="70"
+                height="38"
+                alt="Круизы в Антарктику"/>
+            </picture>
+            <nav class="page-header__nav nav nav--no-js" data-nav-nojs>
+              <button type="button" class="nav__btn nav__btn--no-js" data-nav-btn></button>
+              <ul class="nav__list nav__list--no-js" data-nav-list-nojs>
                 <li class="nav__list-item">
-                  <a href="" class="nav__link">Преимущества</a>
+                  <a href="#features" class="nav__link">Преимущества</a>
                 </li>
                 <li class="nav__list-item">
                   <a href="" class="nav__link">Направления</a>
                 </li>
                 <li class="nav__list-item">
-                  <a href="" class="nav__link">Ближайшие круизы</a>
+                  <a href="#cruises" class="nav__link">Ближайшие круизы</a>
                 </li>
                 <li class="nav__list-item">
-                  <a href="" class="nav__link">Контакты</a>
+                  <a href="#contacts" class="nav__link">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -67,8 +78,8 @@
       <main class="page-main">
         <section class="main-screen">
           <div class="container">
-            <h1 class="main-screen__title">Круизы в Антарктику</h1>
-            <p class="main-screen__text">Волшебный мир айсбергов и пингвинов</p>
+            <h1 class="main-screen__title">Круизы <br class="main-screen__br">в Антарктику</h1>
+            <p class="main-screen__text">Волшебный мир <br class="main-screen__br">айсбергов и пингвинов</p>
           </div>
         </section>
 
@@ -97,21 +108,19 @@
                   src="img/content/journeys-desktop.jpg, img/content/journeys-desktop@2x.jpg"
                   width="506"
                   height="301"
-                  alt="Красивые пингвины"
-                  area-label="Красивые пингвины"
-                  tabindex="0"/>
+                  alt="Красивые пингвины"/>
               </picture>
             </div>
           </div>
         </section>
 
-        <section class="features">
+        <section class="features" id="features">
           <div class="container">
             <h2 class="features__title">Преимущества</h2>
             <ul class="features__list">
               <li class="features__list-item feature">
                 <div class="feature__image"></div>
-                <h4 class="feature__title">Небольшой круизный лайнер</h4>
+                <h3 class="feature__title">Небольшой круизный лайнер</h3>
                 <p class="feature__title">
                   Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей
                   и даст возможность насладиться видами и природой.
@@ -119,7 +128,7 @@
               </li>
               <li class="features__list-item feature">
                 <div class="feature__image"></div>
-                <h4 class="feature__title">Система все включено</h4>
+                <h3 class="feature__title">Система все включено</h3>
                 <p class="feature__title">
                   Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар
                   доступны для вас 24 часа.
@@ -127,7 +136,7 @@
               </li>
               <li class="features__list-item feature">
                 <div class="feature__image"></div>
-                <h4 class="feature__title">Экскурсионные туры на Zodiac</h4>
+                <h3 class="feature__title">Экскурсионные туры на Zodiac</h3>
                 <p class="feature__title">
                   Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac
                   в сопровождении опытных экскурсоводов.
@@ -137,7 +146,7 @@
           </div>
         </section>
 
-        <section class="cruises">
+        <section class="cruises" id="cruises">
           <div class="container">
             <h2 class="cruises__title">Ближайшие круизы</h2>
             <ul class="cruises__list">
@@ -372,7 +381,7 @@
           </div>
         </section>
 
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <div class="container">
             <div class="contacts__map">
               <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3aa0e170aa79bfe630477d2f56fe7bf50c8fefb526ed5d75ad87773084a7d910&amp;
@@ -396,8 +405,8 @@
 
       <footer class="page-footer footer">
         <div class="container">
-          <div class="footer__wrappper">
-            <picture>
+          <div class="footer__wrapper">
+            <picture class="footer__picture">
               <source
                 media="(min-width: 767px)"
                 srcset="img/svg/logo-mobile.svg"/>
@@ -405,82 +414,56 @@
                 media="(max-width: 768px)"
                 srcset="img/svg/logo-tablet.svg"/>
               <img
-                class="logo__image"
+                class="footer__logo logo"
                 src="img/svg/logo-desktop.svg"
                 width="70"
                 height="38"
-                alt="Круизы в Антарктику"
-                area-label="Круизы в Антарктику"
-                tabindex="0"/>
+                alt="Круизы в Антарктику"/>
             </picture>
-            <nav class="footer__nav nav">
-              <ul class="nav__list">
-                <li class="nav__list-item">
-                  <a href="" class="nav__link">Преимущества</a>
+            <nav class="footer__nav">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-list-item">
+                  <a href="#features" class="footer__nav-link">Преимущества</a>
                 </li>
-                <li class="nav__list-item">
-                  <a href="" class="nav__link">Направления</a>
+                <li class="footer__nav-list-item">
+                  <a href="" class="footer__nav-link">Направления</a>
                 </li>
-                <li class="nav__list-item">
-                  <a href="" class="nav__link">Ближайшие круизы</a>
+                <li class="footer__nav-list-item">
+                  <a href="#cruises" class="footer__nav-link">Ближайшие круизы</a>
                 </li>
-                <li class="nav__list-item">
-                  <a href="" class="nav__link">Контакты</a>
+                <li class="footer__nav-list-item">
+                  <a href="#contacts" class="footer__nav-link">Контакты</a>
                 </li>
               </ul>
             </nav>
-            <ul class="footer__social">
-              <li class="footer__social-item">
-                <a href="" class="footer__social-link">
-                  <picture>
-                    <source
-                      media="(max-width: 768px)"
-                      srcset="img/sprite/icon-fb-small.svg"/>
-                    <img
-                      class="footer__social-icon"
-                      src="img/sprite/icon-fb-big.svg"
-                      width="11"
-                      height="20"
-                      alt="Перейти в Фейсбук"/>
-                  </picture>
+            <ul class="footer__social social">
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="20" height="16">
+                    <use xlink:href="img/sprite_auto.svg#icon-fb-big"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="footer__social-item">
-                <a href="" class="footer__social-link">
-                  <picture>
-                    <source
-                      media="(max-width: 768px)"
-                      srcset="img/sprite/icon-insta-small.svg"/>
-                    <img
-                      class="footer__social-icon"
-                      src="img/sprite/icon-insta-big.svg"
-                      width="20"
-                      height="20"
-                      alt="Перейти в Инстаграм"/>
-                  </picture>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="20" height="16">
+                    <use xlink:href="img/sprite_auto.svg#icon-insta-big"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="footer__social-item">
-                <a href="" class="footer__social-link">
-                  <picture>
-                    <source
-                      media="(max-width: 768px)"
-                      srcset="img/sprite/icon-twitter-small.svg"/>
-                    <img
-                      class="footer__social-icon"
-                      src="img/sprite/icon-twitter-big.svg"
-                      width="20"
-                      height="16"
-                      alt="Перейти в Твиттер"/>
-                  </picture>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="20" height="16">
+                    <use xlink:href="img/sprite_auto.svg#icon-twitter-big"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
           </div>
         </div>
       </footer>
-
     </div>
+
     <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>

@@ -38,6 +38,11 @@ a {
   text-decoration: none;
 }
 
+picture {
+  font-size: 0;
+  line-height: 0;
+}
+
 img,
 video {
   display: block;
@@ -125,4 +130,10 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

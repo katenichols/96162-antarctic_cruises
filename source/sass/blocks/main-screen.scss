@@ -1,0 +1,60 @@
+.main-screen {
+  margin-top: -73px;
+  padding: 283px 0;
+
+  background-image: url("../img/main-back-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (max-width: $vp-974) {
+    padding: 280px 0;
+  }
+
+  @media (max-width: $vp-728) {
+    padding: 185px 0;
+  }
+}
+
+.main-screen__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  @include font-group-bold($size-54, $auto);
+  color: $color-alice-blue;
+
+  @media (max-width: $vp-974) {
+    margin-bottom: 29px;
+
+    @include font-group-small($size-50, $auto);
+  }
+
+  @media (max-width: $vp-728) {
+    margin-bottom: 25px;
+
+    @include font-group-small($size-36, $line-125);
+  }
+}
+
+.main-screen__text {
+  margin: 0;
+
+  @include font-group($size-20, $auto);
+  color: $color-alice-blue;
+
+  @media (max-width: $vp-974) {
+    @include font-group-small($size-18, $auto);
+  }
+
+  @media (max-width: $vp-728) {
+    @include font-group-small($size-16, $line-140);
+  }
+}
+
+.main-screen__br {
+  display: none;
+
+  @media (max-width: $vp-514) {
+    display: block;
+  }
+}

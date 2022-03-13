@@ -1,0 +1,19 @@
+.social {
+  display: flex;
+}
+
+.social__item {
+  margin-right: 33px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  @media (max-width: $vp-974) {
+    margin-right: 23px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
