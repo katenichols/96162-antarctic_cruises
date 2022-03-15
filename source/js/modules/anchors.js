@@ -1,8 +1,8 @@
 const anchors = document.querySelectorAll('.nav__link');
 
 for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
+  anchor.addEventListener('click', (evt) => {
+    evt.preventDefault();
 
     const blockID = anchor.getAttribute('href').substr(1);
 

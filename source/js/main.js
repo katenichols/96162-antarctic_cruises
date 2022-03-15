@@ -1,15 +1,16 @@
 import { iosVhFix } from './utils/ios-vh-fix';
 import { initModals } from './modules/modals/init-modals';
 import './modules/anchors';
+import './modules/nav-link-click';
+import './modules/nav-btn';
+import { navBtn } from './modules/nav-btn';
+import { pageHeader, pageHeaderWrapper, pageHeaderPicture, nav, navList } from './modules/nav-btn';
 
-const pageHeader = document.querySelector('[data-header-mobile]');
-const pageHeaderPicture = document.querySelector('[data-header-picture]');
+
 const pageHeaderPictureNoJs = document.querySelector('[data-header-picture-nojs]');
-const pageHeaderWrapper = document.querySelector('[data-header-wrapper]');
 const containerNoJs = document.querySelector('[data-container-nojs]');
-const navBtn = document.querySelector('[data-nav-btn');
-const navNoJs = document.querySelector('[data-nav-nojs]');
-const navList = document.querySelector('[data-nav-list-nojs]');
+
+
 
 // ---------------------------------
 
@@ -28,8 +29,8 @@ window.addEventListener('DOMContentLoaded', () => {
   pageHeaderPictureNoJs.style.display = 'none';
   pageHeaderWrapper.classList.remove('page-header__wrapper--no-js');
   containerNoJs.classList.remove('container--no-js');
+  nav.classList.remove('nav--no-js');
   navBtn.classList.remove('nav__btn--no-js');
-  navNoJs.classList.remove('nav--no-js');
   navList.classList.remove('nav__list--no-js');
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

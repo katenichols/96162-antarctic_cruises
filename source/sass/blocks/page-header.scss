@@ -1,12 +1,13 @@
 .page-header {
-  // position: absolute;
-  // top: 35px;
-  // left: 0;
-
   position: relative;
 
   width: 100%;
   padding-top: 35px;
+
+  background-image: url("../img/main-back-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   @media (max-width: $vp-768) {
     padding-top: 30px;
@@ -22,18 +23,21 @@
 }
 
 .page-header--no-js {
-  @media (max-width: $vp-728) {
-    position: relative;
-    top: 0;
-    left: auto;
+  position: relative;
+  top: 0;
 
+  padding-top: 35px;
+
+  background-color: $color-dark-cerulean;
+
+  @media (max-width: $vp-974) {
+    padding-top: 30px;
+  }
+
+  @media (max-width: $vp-514) {
     display: block;
-    width: 285px;
-    height: 568px;
-    margin-right: 0;
-    margin-left: auto;
-
-    background-color: $color-alice-blue;
+    width: 100%;
+    padding-top: 20px;
   }
 
   @media (max-width: $vp-480) {
@@ -45,18 +49,56 @@
   }
 }
 
+.page-header--modal {
+  @media (max-width: $vp-728) {
+    padding-top: 52px;
+  }
+
+  @media (max-width: $vp-480) {
+    padding-top: 47px;
+  }
+
+  @media (max-width: $vp-320) {
+    padding-top: 42px;
+  }
+}
+
 .page-header__wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .page-header__wrapper--no-js {
   @media (max-width: $vp-728) {
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px 0 20px 0;
+    // padding: 20px 0 20px 0;
+  }
+}
+
+.page-header__wrapper--modal {
+  @media (max-width: $vp-728) {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+    width: 285px;
+    height: 568px;
+    margin-right: 0;
+    margin-left: auto;
+    padding: 20px 15px;
+
+    background-color: $color-alice-blue;
+  }
+
+  @media (max-width: $vp-480) {
+    top: 0;
+  }
+
+  @media (max-width: $vp-320) {
+    top: 0;
   }
 }
 
@@ -76,13 +118,19 @@
 .page-header__picture-no-js {
   display: inline-block;
   width: 70px;
+  margin-right: 33px;
 
   @media (max-width: $vp-974) {
     width: 38px;
+    margin-right: 23px;
   }
 
   @media (max-width: $vp-728) {
     width: 42px;
     margin-bottom: 33px;
   }
+}
+
+.page-header__picture-modal {
+  margin-bottom: 33px;
 }

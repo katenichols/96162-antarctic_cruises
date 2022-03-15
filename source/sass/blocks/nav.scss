@@ -1,16 +1,23 @@
 .nav {
   position: relative;
-  max-width: 1056px;
+  margin-left: 33px;
+
+  @media (max-width: $vp-728) {
+    margin-left: 0;
+  }
 }
 
 .nav--no-js {
   width: 100%;
-  margin-left: 0;
+}
+
+.nav--opened {
+  padding-top: 33px;
 }
 
 .nav__btn {
   position: absolute;
-  top: -12px;
+  top: 0;
   right: 0;
 
   display: none;
@@ -55,6 +62,10 @@
 
 .is-open {
   @media (max-width: $vp-728) {
+    top: -22px;
+
+    width: 13px;
+
     background-image: url("../img/sprite/icon-close.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -75,8 +86,17 @@
 
   &--opened,
   &--no-js {
-    @media (max-widtH: $vp-728) {
+    @media (max-width: $vp-728) {
       display: block;
+      max-height: 453px;
+
+      overflow: scroll;
+    }
+  }
+
+  &--no-js {
+    @media (max-width: $vp-728) {
+      padding-top: 0;
     }
   }
 }
@@ -101,25 +121,38 @@
   }
 }
 
-.nav__list--no-js .nav__list-item {
+.nav__list--no-js .nav__list-item,
+.nav__list--opened .nav__list-item {
   @media (max-width: $vp-728) {
     margin-bottom: 10px;
     padding: 7px 10px 6px 10px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
 .nav__link {
+  display: block;
+
   @include font-group-medium($size-16, $auto);
   color: $color-alice-blue;
 
   @media (max-width: $vp-974) {
     @include font-group-small($size-14, $auto);
+
+    overflow: hidden;
   }
 }
 
-.nav__list--no-js .nav__link {
+.nav__list--no-js .nav__link,
+.nav__list--opened .nav__link {
   @media (max-width: $vp-728) {
     @include font-group-small($size-18, $auto);
-    color: $color-tangaroa;
   }
+}
+
+.nav__list--opened .nav__link {
+  color: $color-tangaroa;
 }

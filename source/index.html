@@ -23,7 +23,7 @@
 
   <body class="page-body">
     <div class="wrapper">
-      <header class="page-header page-header--no-js" data-header-mobile>
+      <header class="page-header page-header--no-js" data-header>
         <div class="container container--no-js" data-container-nojs>
           <div class="page-header__wrapper page-header__wrapper--no-js" data-header-wrapper>
             <picture class="page-header__picture" data-header-picture>
@@ -43,7 +43,7 @@
             <picture class="page-header__picture-no-js" data-header-picture-nojs>
               <source
                 media="(max-width: 728px)"
-                srcset="img/svg/logo-nav-mobile.svg"/>
+                srcset="img/svg/logo-mobile.svg"/>
               <source
                 media="(max-width: 1024px)"
                 srcset="img/svg/logo-tablet.svg"/>
@@ -54,7 +54,21 @@
                 height="38"
                 alt="Круизы в Антарктику"/>
             </picture>
-            <nav class="page-header__nav nav nav--no-js" data-nav-nojs>
+            <picture class="page-header__picture-modal visually-hidden " data-header-picture-modal>
+              <source
+                media="(max-width: 728px)"
+                srcset="img/svg/logo-modal.svg"/>
+              <source
+                media="(max-width: 1024px)"
+                srcset="img/svg/logo-tablet.svg"/>
+              <img
+                class="page-header__logo logo"
+                src="img/svg/logo-desktop.svg"
+                width="42"
+                height="22"
+                alt="Круизы в Антарктику"/>
+            </picture>
+            <nav class="page-header__nav nav nav--no-js" data-nav>
               <button type="button" class="nav__btn nav__btn--no-js" data-nav-btn></button>
               <ul class="nav__list nav__list--no-js" data-nav-list-nojs>
                 <li class="nav__list-item">
@@ -73,16 +87,15 @@
             </nav>
           </div>
         </div>
-      </header>
-
-      <main class="page-main">
-        <section class="main-screen">
+        <section class="main-screen main-screen--no-js">
           <div class="container">
             <h1 class="main-screen__title">Круизы <br class="main-screen__br">в Антарктику</h1>
             <p class="main-screen__text">Волшебный мир <br class="main-screen__br">айсбергов и пингвинов</p>
           </div>
         </section>
+      </header>
 
+      <main class="page-main">
         <section class="journeys">
           <div class="container">
             <div class="journeys-wrapper">
@@ -93,22 +106,9 @@
                 несколько видов пингвинов, китов, морских котиков и многое другое.
               </p>
               <picture>
-                <source
-                  media="(min-width: 767px)"
-                  srcset="
-                    img/content/journeys-mobile.jpg,
-                    img/content/journeys-mobile@2x.jpg"/>
-                <source
-                  media="(max-width: 768px)"
-                  srcset="
-                    img/content/journeys-tablet.jpg,
-                    img/content/journeys-tablet@2x.jpg"/>
-                <img
-                  class="journeys__image"
-                  src="img/content/journeys-desktop.jpg, img/content/journeys-desktop@2x.jpg"
-                  width="506"
-                  height="301"
-                  alt="Красивые пингвины"/>
+                <source media="(max-width: 728px)" srcset="img/content/journeys-mobile.jpg, img/content/journeys-mobile@2x.jpg 2x"/>
+                <source media="(max-width: 974px)" srcset="img/content/journeys-tablet.jpg, img/content/journeys-tablet@2x.jpg 2x"/>
+                <img class="journeys__image" src="img/content/journeys-desktop.jpg" srcset="img/content/journeys-desktop@2x.jpg 2x" width="560" height="301" alt="Красивые пингвины"/>
               </picture>
             </div>
           </div>
@@ -368,10 +368,10 @@
                   <input type="text" class="form__input" id="name" placeholder="Имя"></p>
                 <p class="form__input-block">
                   <label for="phone" class="form__label visually-hidden"></label>
-                  <input type="tel" class="form__input" if="phone" placeholder="Телефон"></p>
+                  <input type="tel" class="form__input" id="phone" placeholder="Телефон"></p>
                 <p class="form__input-block">
                   <label for="email" class="form__label visually-hidden"></label>
-                  <input type="mailto" class="form__input"id="email" placeholder="Email"></p>
+                  <input type="email" class="form__input" id="email" placeholder="Email"></p>
                 <p class="form__input-block">
                   <label for="assent" class="form__label visually-hidden"></label>
                   <input type="checkbox" class="form__input" id="assent"></p>
@@ -383,12 +383,11 @@
 
         <section class="contacts" id="contacts">
           <div class="container">
+            <h1 class="visually-hidden">Карта проезда</h1>
             <div class="contacts__map">
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3aa0e170aa79bfe630477d2f56fe7bf50c8fefb526ed5d75ad87773084a7d910&amp;
-                source=constructor"
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3aa0e170aa79bfe630477d2f56fe7bf50c8fefb526ed5d75ad87773084a7d910&amp;source=constructor"
                 width="560"
                 height="306"
-                frameborder="0"
                 allowfullscreen=""
                 loading="lazy">
               </iframe>
@@ -408,10 +407,10 @@
           <div class="footer__wrapper">
             <picture class="footer__picture">
               <source
-                media="(min-width: 767px)"
+                media="(max-width: 728px)"
                 srcset="img/svg/logo-mobile.svg"/>
               <source
-                media="(max-width: 768px)"
+                media="(max-width: 974px)"
                 srcset="img/svg/logo-tablet.svg"/>
               <img
                 class="footer__logo logo"
@@ -438,21 +437,21 @@
             </nav>
             <ul class="footer__social social">
               <li class="social__item">
-                <a href="" class="social__link">
+                <a href="https://ru.wikipedia.org/wiki/Facebook" class="social__link" target="_blank">
                   <svg width="20" height="16">
                     <use xlink:href="img/sprite_auto.svg#icon-fb-big"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a href="" class="social__link">
+                <a href="https://ru.wikipedia.org/wiki/Instagram" class="social__link" target="_blank">
                   <svg width="20" height="16">
                     <use xlink:href="img/sprite_auto.svg#icon-insta-big"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a href="" class="social__link">
+                <a href="https://en.wikipedia.org/wiki/Twitter" class="social__link" target="_blank">
                   <svg width="20" height="16">
                     <use xlink:href="img/sprite_auto.svg#icon-twitter-big"></use>
                   </svg>
@@ -505,7 +504,7 @@
       </div>
     </div>
 
-    <script src="js/vendor.min.js"></script>
+    <!-- <script src="js/vendor.min.js"></script> -->
     <script src="js/main.min.js"></script>
   </body>
 </html>
