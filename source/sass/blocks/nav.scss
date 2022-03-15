@@ -1,6 +1,9 @@
 .nav {
   position: relative;
+
+  display: flex;
   margin-left: 33px;
+  align-items: center;
 
   @media (max-width: $vp-728) {
     margin-left: 0;
@@ -43,6 +46,10 @@
       background-color: $color-alice-blue;
       box-shadow: 0 6px 0 0 $color-alice-blue, 0 12px 0 0 $color-alice-blue;
     }
+  }
+
+  @media (max-width: $vp-320) {
+    top: -1px;
   }
 
   &:hover {
