@@ -1,17 +1,14 @@
 .journeys__wrapper {
   display: flex;
   justify-content: space-between;
-  // display: grid;
-  // grid-template-columns: auto 560px;
   padding: 120px 0;
 
   @media (max-width: $vp-768) {
-    // grid-template-columns: auto 324px;
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 93px;
   }
 
   @media (max-width: $vp-728) {
-    // grid-template-columns: 1fr;
     flex-direction: column;
     padding: 65px 0;
   }

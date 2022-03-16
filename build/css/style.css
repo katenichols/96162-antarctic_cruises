@@ -902,6 +902,94 @@ ul {
   color: #011c40;
 }
 
+.features {
+  width: 100%;
+  padding-top: 110px;
+  padding-bottom: 120px;
+  background-image: url("../../img/features-back.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #d0e0ee;
+}
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 49px;
+  text-align: center;
+  font-family: "Montserrat Semibold", "Trebuchet MS", Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 150%;
+  font-weight: 600;
+}
+
+.features__list {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 360px);
+  gap: 40px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.feature {
+  position: relative;
+  display: block;
+  padding: 80px 34px 26px 30px;
+  background-color: #f9fbfd;
+}
+
+.feature::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  display: block;
+  width: 42px;
+  height: 32px;
+  background-position: 0 center;
+  background-repeat: no-repeat;
+}
+
+.feature:first-of-type::before {
+  background-image: url("../../img/sprite/icon-ship-big.svg");
+}
+
+.feature:nth-of-type(2) {
+  padding-right: 46px;
+}
+
+.feature:nth-of-type(2)::before {
+  background-image: url("../../img/sprite/icon-marks-big.svg");
+}
+
+.feature:last-of-type::before {
+  background-image: url("../../img/sprite/icon-boat-big.svg");
+}
+
+.feature__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: "Montserrat Medium", "Trebuchet MS", Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 500;
+  color: #011c40;
+}
+
+.feature__text {
+  margin: 0;
+  font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: 400;
+  color: #011c40;
+}
+
 .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1146,6 +1234,40 @@ ul {
     font-size: 18px;
     line-height: 1.22;
   }
+
+  .features__list {
+    grid-template-columns: repeat(auto-fill, 209px);
+    gap: 30px;
+  }
+
+  .feature {
+    padding: 69px 19px 21px 20px;
+  }
+
+  .feature::before {
+    top: 22px;
+    left: 20px;
+  }
+
+  .feature:first-of-type::before {
+    background-image: url("../../img/sprite/icon-ship-small.svg");
+  }
+
+  .feature:nth-of-type(2) {
+    padding-right: 19px;
+  }
+
+  .feature:nth-of-type(2)::before {
+    background-image: url("../../img/sprite/icon-marks-small.svg");
+  }
+
+  .feature:last-of-type::before {
+    background-image: url("../../img/sprite/icon-boat-small.svg");
+  }
+
+  .feature__title {
+    margin-bottom: 8px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1162,7 +1284,8 @@ ul {
   }
 
   .journeys__wrapper {
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 93px;
   }
 
   .journeys__title {
@@ -1175,6 +1298,20 @@ ul {
 
   .journeys__text {
     max-width: 320px;
+  }
+
+  .features {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  .features__title {
+    margin-bottom: 50px;
+    font-size: 26px;
+  }
+
+  .features__list {
+    gap: 25px;
   }
 }
 
@@ -1385,6 +1522,23 @@ ul {
   }
 }
 
+@media (max-width: 537px) {
+  .features__list {
+    grid-template-columns: repeat(auto-fill, 290px);
+    gap: 30px;
+  }
+
+  .feature {
+    padding-right: 15px;
+  }
+
+  .feature__title {
+    width: 170px;
+    margin-bottom: 9px;
+    line-height: 140%;
+  }
+}
+
 @media (max-width: 514px) {
   .page-header--no-js {
     display: block;
@@ -1412,6 +1566,15 @@ ul {
 
   .page-header__wrapper--modal {
     top: 0;
+  }
+
+  .features__title {
+    margin-bottom: 31px;
+    font-size: 24px;
+  }
+
+  .feature {
+    padding-top: 71px;
   }
 }
 
@@ -1459,5 +1622,20 @@ ul {
   .journeys__title {
     margin-top: -8px;
     font-size: 24px;
+  }
+
+  .features {
+    padding-top: 56px;
+    padding-bottom: 66px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+  .page-header {
+    background-image: url("../img/main-back-desktop@2x.jpg");
+  }
+
+  .features {
+    background-image: url("../../img/features-back@2x.jpg");
   }
 }
