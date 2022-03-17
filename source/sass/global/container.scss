@@ -32,3 +32,27 @@
     padding: 0 15px;
   }
 }
+
+.container--catalog {
+  padding: 0 118px;
+
+  @include vp-1159 {
+    padding: 0 98px;
+  }
+
+  @media (max-width: $vp-1036) {
+    padding: 0 64px;
+  }
+
+  @media (max-width: $vp-768) {
+    padding: 0 60px;
+  }
+
+  @include vp-479 {
+    padding: 0 33px;
+  }
+
+  @include vp-415 {
+    padding: 0 25px;
+  }
+}

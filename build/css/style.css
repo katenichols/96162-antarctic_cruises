@@ -649,6 +649,10 @@ ul {
   padding: 0 103px;
 }
 
+.container--catalog {
+  padding: 0 118px;
+}
+
 .page-body {
   max-width: 1366px;
   margin: 0 auto;
@@ -990,6 +994,138 @@ ul {
   color: #011c40;
 }
 
+.catalog {
+  padding-top: 110px;
+}
+
+.catalog__title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 49px;
+  font-family: "Montserrat Semibold", "Trebuchet MS", Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 150%;
+  font-weight: 600;
+  color: #011c40;
+}
+
+.catalog__list {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 260px);
+  gap: 30px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  z-index: 0;
+}
+
+.card__first {
+  display: block;
+  padding: 329px 30px 30px 30px;
+}
+
+.card__second {
+  position: relative;
+  display: none;
+  min-height: 386px;
+  padding: 29px 25px 0 25px;
+  background-color: #011c40;
+}
+
+.card:hover > .card__first {
+  display: none;
+}
+
+.card:hover > .card__second {
+  display: block;
+}
+
+.card__picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  line-height: 0;
+}
+
+.card__image {
+  width: 260px;
+  height: 386px;
+}
+
+.card__title {
+  position: relative;
+  z-index: 10;
+  margin: 0;
+  font-family: "Montserrat Medium", "Trebuchet MS", Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 500;
+  color: #f9fbfd;
+}
+
+.card__title--second {
+  margin-bottom: 14px;
+}
+
+.card__text-block {
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+
+.card__text-block:last-of-type {
+  margin-bottom: 24px;
+}
+
+.card__subtitle {
+  display: block;
+  margin-bottom: 2px;
+  font-family: "Montserrat Medium", "Trebuchet MS", Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: 500;
+  color: #f9fbfd;
+}
+
+.card__text {
+  display: block;
+  font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: 400;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #d8d8d9;
+}
+
+.card__link {
+  position: absolute;
+  bottom: 34px;
+  left: 25px;
+  display: block;
+  width: 210px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 9px;
+  font-family: "Montserrat Semibold", "Trebuchet MS", Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 600;
+  color: #011c40;
+  background-color: #f9fbfd;
+}
+
 .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1150,6 +1286,16 @@ ul {
   .container {
     padding: 0 83px;
   }
+
+  .container--catalog {
+    padding: 0 98px;
+  }
+}
+
+@media (max-width: 1036px) {
+  .container--catalog {
+    padding: 0 64px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1159,6 +1305,36 @@ ul {
 
   .journeys__image {
     width: 324px;
+  }
+
+  .catalog {
+    padding-top: 90px;
+  }
+
+  .catalog__title {
+    font-size: 26px;
+  }
+
+  .catalog__list {
+    grid-template-columns: repeat(auto-fill, 309px);
+  }
+
+  .card__first {
+    padding: 332px 35px 27px 35px;
+  }
+
+  .card__second {
+    padding: 29px 35px 0 35px;
+  }
+
+  .card__image {
+    width: 309px;
+  }
+
+  .card__link {
+    bottom: 35px;
+    left: 35px;
+    width: 239px;
   }
 }
 
@@ -1277,6 +1453,10 @@ ul {
 
   .container--no-js {
     padding: 0 45px;
+  }
+
+  .container--catalog {
+    padding: 0 60px;
   }
 
   .page-header {
@@ -1522,6 +1702,41 @@ ul {
   }
 }
 
+@media (max-width: 678px) {
+  .catalog {
+    padding-top: 56px;
+  }
+
+  .catalog__title {
+    margin-bottom: 31px;
+    font-size: 24px;
+  }
+
+  .catalog__list {
+    grid-template-columns: repeat(auto-fill, 270px);
+  }
+
+  .card__first {
+    padding: 341px 25px 18px 25px;
+  }
+
+  .card__second {
+    padding-top: 28px;
+    padding-left: 25px;
+  }
+
+  .card__image {
+    width: 270px;
+  }
+
+  .card__link {
+    left: 25px;
+    width: 220px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+  }
+}
+
 @media (max-width: 537px) {
   .features__list {
     grid-template-columns: repeat(auto-fill, 290px);
@@ -1586,11 +1801,19 @@ ul {
   .container--no-js {
     padding: 0 15px;
   }
+
+  .container--catalog {
+    padding: 0 33px;
+  }
 }
 
 @media (max-width: 415px) {
   .container {
     padding: 0 15px;
+  }
+
+  .container--catalog {
+    padding: 0 25px;
   }
 }
 
