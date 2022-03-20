@@ -425,19 +425,21 @@
 
         <section class="contacts" id="contacts">
           <div class="container">
-            <h1 class="visually-hidden">Карта проезда</h1>
-            <div class="contacts__map">
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3aa0e170aa79bfe630477d2f56fe7bf50c8fefb526ed5d75ad87773084a7d910&amp;source=constructor"
-                width="560"
-                height="306"
-                allowfullscreen=""
-                loading="lazy">
-              </iframe>
-            </div>
+            <h1 class="visually-hidden">Контакты</h1>
             <div class="contacts__wrapper">
-              <p class="contacts__title">У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
-              <p class="contacts__text contacts__text--address">г. Санкт Петербург, ул. Большая Конюшенная, 19/8</p>
-              <p class="contacts__text contacts__text--phone">8-800-200-00-00</p>
+              <div class="contacts__map" id="map" data-map>
+                <!-- <iframe class="contacts__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A3aa0e170aa79bfe630477d2f56fe7bf50c8fefb526ed5d75ad87773084a7d910&amp;source=constructor"
+                  width="560"
+                  height="306"
+                  allowfullscreen=""
+                  loading="lazy">
+                </iframe> -->
+              </div>
+              <div class="contacts__inner-wrapper">
+                <p class="contacts__title">У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
+                <p class="contacts__text contacts__text--address">г. Санкт Петербург, <br class="contacts__br">ул. Большая Конюшенная, 19/8</p>
+                <p class="contacts__text contacts__text--phone">8-800-200-00-00</p>
+              </div>
             </div>
           </div>
         </section>
@@ -547,6 +549,7 @@
     </div>
 
     <!-- <script src="js/vendor.min.js"></script> -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

@@ -835,6 +835,11 @@ ul {
   margin-right: 0;
 }
 
+.social__link svg {
+  width: 16px;
+  height: 16px;
+}
+
 .main-screen {
   margin-top: -73px;
   padding-top: 270px;
@@ -1284,6 +1289,90 @@ ul {
   cursor: pointer;
 }
 
+.contacts__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 560px 1fr;
+  grid-template-columns: 560px 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 112px;
+}
+
+.contacts__map {
+  width: 560px;
+  height: 306px;
+  line-height: 0;
+  background-image: url("../../img/map-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contacts__iframe {
+  width: 100%;
+  height: 306px;
+  border: none;
+}
+
+.contacts__inner-wrapper {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  padding: 74px 0 76px 100px;
+}
+
+.contacts__title {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-family: "Montserrat Medium", "Trebuchet MS", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 500;
+  color: #011c40;
+}
+
+.contacts__text {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 22px;
+  padding-left: 28px;
+  font-family: "Montserrat", "Trebuchet MS", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+.contacts__text::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 18px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.contacts__text--address::before {
+  background-image: url("../../img/sprite/icon-map-mark.svg");
+}
+
+.contacts__text--phone {
+  margin-bottom: 0;
+}
+
+.contacts__text--phone::before {
+  background-image: url("../../img/sprite/icon-phone.svg");
+}
+
+.contacts__br {
+  display: none;
+}
+
 .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1452,6 +1541,53 @@ ul {
   .booking__wrapper {
     -ms-grid-columns: 1fr 403px;
     grid-template-columns: 1fr 403px;
+  }
+
+  .contacts__wrapper {
+    -ms-grid-columns: 324px 1fr;
+    grid-template-columns: 324px 1fr;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .contacts__map {
+    width: 324px;
+    height: 335px;
+    background-image: url("../../img/map-tablet.jpg");
+  }
+
+  .contacts__iframe {
+    height: 335px;
+  }
+
+  .contacts__inner-wrapper {
+    padding: 66px 0 46px 30px;
+  }
+
+  .contacts__title {
+    margin-bottom: 28px;
+  }
+
+  .contacts__text {
+    margin-bottom: 21px;
+  }
+
+  .contacts__text::before {
+    top: 4px;
+  }
+
+  .contacts__text--phone::before {
+    top: -1px;
+  }
+
+  .contacts__br {
+    display: inline;
+  }
+}
+
+@media (max-width: 1162px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1162px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1162px) and (min-resolution: 2dppx) {
+  .contacts__map {
+    background-image: url("../../img/map-tablet@2x.jpg");
   }
 }
 
@@ -1681,6 +1817,54 @@ ul {
     padding-top: 30px;
   }
 
+  .footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 40px 0 40px 0;
+  }
+
+  .footer__picture {
+    width: 42px;
+    margin-right: 0;
+    margin-bottom: 27px;
+  }
+
+  .footer__nav-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 23px;
+  }
+
+  .footer__nav-list-item:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .footer__nav-list-item {
+    margin-right: 0;
+    margin-bottom: 18px;
+    font-size: 12px;
+    line-height: 1.22;
+  }
+
+  .social {
+    margin-left: -3px;
+  }
+
+  .social__item {
+    margin-right: 19px;
+  }
+
+  .social__item:nth-of-type(2) {
+    margin-right: 22px;
+  }
+
   .journeys__wrapper {
     padding-top: 100px;
     padding-bottom: 93px;
@@ -1846,42 +2030,6 @@ ul {
     line-height: 1.22;
   }
 
-  .footer__wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    padding: 40px 0 40px 0;
-  }
-
-  .footer__picture {
-    width: 42px;
-    margin-right: 0;
-    margin-bottom: 27px;
-  }
-
-  .footer__nav-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-bottom: 23px;
-  }
-
-  .footer__nav-list-item:last-of-type {
-    margin-bottom: 0;
-  }
-
-  .footer__nav-list-item {
-    margin-right: 0;
-    margin-bottom: 18px;
-    font-size: 12px;
-    line-height: 1.22;
-  }
-
   .main-screen {
     padding-top: 206px;
     padding-bottom: 178px;
@@ -1953,6 +2101,39 @@ ul {
     width: 220px;
     padding-top: 9px;
     padding-bottom: 10px;
+  }
+
+  .contacts__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    padding-top: 58px;
+    padding-bottom: 65px;
+  }
+
+  .contacts__map {
+    width: 100%;
+    height: 316px;
+    background-image: url("../../img/map-mobile.jpg");
+    background-position: top;
+  }
+
+  .contacts__iframe {
+    height: 316px;
+  }
+
+  .contacts__inner-wrapper {
+    padding: 0 0 14px 0;
+  }
+}
+
+@media (max-width: 678px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 678px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 678px) and (min-resolution: 2dppx) {
+  .contacts__map {
+    background-image: url("../../img/map-mobile@2x.jpg");
   }
 }
 
@@ -2165,5 +2346,9 @@ ul {
 
   .booking {
     background-image: url("../../img/booking-back-desktop@2x.jpg");
+  }
+
+  .contacts__map {
+    background-image: url("../../img/map-desktop@2x.jpg");
   }
 }

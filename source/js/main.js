@@ -4,6 +4,7 @@ import './modules/anchors';
 import './modules/nav-link-click';
 import './modules/nav-btn';
 import './modules/form';
+import './modules/map';
 import {navBtn} from './modules/nav-btn';
 import {pageHeader, pageHeaderWrapper, pageHeaderPicture, nav, navList} from './modules/nav-btn';
 
