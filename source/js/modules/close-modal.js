@@ -1,5 +1,5 @@
-import { onEscKeydown } from './../utils/esc-key';
-import { classListsToggle } from '../modules/nav-btn';
+import {onEscKeydown} from './../utils/esc-key';
+import {classListsToggle} from '../modules/nav-btn';
 
 const closeModal = () => {
   classListsToggle();
@@ -7,4 +7,4 @@ const closeModal = () => {
   document.removeEventListener('keydown', onEscKeydown);
 };
 
-export { closeModal };
+export {closeModal};

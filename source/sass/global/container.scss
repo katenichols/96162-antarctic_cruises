@@ -2,7 +2,7 @@
   width: 100%;
   padding: 0 103px;
 
-  @include vp-1159 {
+  @media (max-width: $vp-1162) {
     padding: 0 83px;
   }
 
@@ -36,7 +36,7 @@
 .container--catalog {
   padding: 0 118px;
 
-  @include vp-1159 {
+  @media (max-width: $vp-1162) {
     padding: 0 98px;
   }
 

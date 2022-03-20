@@ -5,7 +5,7 @@
 }
 
 @mixin font-group($size, $height) {
-  font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+  font-family: "Montserrat", "Trebuchet MS", "Helvetica", sans-serif;
   font-style: normal;
   font-size: $size;
   line-height: $height;
@@ -13,7 +13,7 @@
 }
 
 @mixin font-group-medium($size, $height) {
-  font-family: "Montserrat Medium", "Trebuchet MS", Helvetica, sans-serif;
+  font-family: "Montserrat Medium", "Trebuchet MS", "Helvetica", sans-serif;
   font-style: normal;
   font-size: $size;
   line-height: $height;
@@ -21,7 +21,7 @@
 }
 
 @mixin font-group-semibold($size, $height) {
-  font-family: "Montserrat Semibold", "Trebuchet MS", Helvetica, sans-serif;
+  font-family: "Montserrat Semibold", "Trebuchet MS", "Helvetica", sans-serif;
   font-style: normal;
   font-size: $size;
   line-height: $height;
@@ -29,7 +29,7 @@
 }
 
 @mixin font-group-bold($size, $height) {
-  font-family: "Montserrat Bold", "Trebuchet MS", Helvetica, sans-serif;
+  font-family: "Montserrat Bold", "Trebuchet MS", "Helvetica", sans-serif;
   font-style: normal;
   font-size: $size;
   line-height: $height;

@@ -1,5 +1,5 @@
-import { escKey } from './../utils/esc-key';
-import { closeModal } from './close-modal';
+import {escKey} from './../utils/esc-key';
+import {closeModal} from './close-modal';
 
 export const navBtn = document.querySelector('[data-nav-btn]');
 

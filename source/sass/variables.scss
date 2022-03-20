@@ -13,11 +13,13 @@ $color-transparent: rgba(255, 255, 255, 0);
 $color-sapphire: #101a56;
 $color-alice-blue: #f9fbfd;
 $color-tangaroa: #011c40;
+$color-tangaroa-fade: rgba(1, 28, 64, 0.7);
 $color-quartz: #d8d8d9;
 $color-pattens-blue: #d0e0ee;
 $color-prussian-blue: #003269;
 $color-sky-blue: #88d0ed;
 $color-dark-cerulean: #004076;
+$color-error: #ff0000;
 
 // Gradient
 
@@ -65,7 +67,8 @@ $vp-846: 846px;
 $vp-974: 974px;
 $vp-1024: 1024px;
 $vp-1036: 1036px;
-$vp-1160: 1160px;
+$vp-1122: 1122px;
+$vp-1162: 1162px;
 $vp-1210: 1210px;
 
 // Retina
@@ -76,19 +79,24 @@ $retina-dppx: 1.5dppx;
 
 // Font-sizes
 // ---------------------------------
+$size-10: 10px;
 $size-12: 12px;
 $size-14: 14px;
 $size-16: 16px;
 $size-18: 18px;
 $size-20: 20px;
+$size-24: 24px;
 $size-26: 26px;
 $size-28: 28px;
+$size-34: 34px;
 $size-36: 36px;
+$size-40: 40px;
 $size-50: 50px;
 $size-54: 54px;
 // ---------------------------------
 $auto: 1.22;
 $line-10: 10px;
 $line-125: 125%;
+$line-130: 130%;
 $line-140: 140%;
 $line-150: 150%;

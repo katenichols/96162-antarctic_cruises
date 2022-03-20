@@ -1,5 +1,5 @@
-import { closeModal } from './close-modal';
-import { pageHeader } from '../modules/nav-btn';
+import {closeModal} from './close-modal';
+import {pageHeader} from '../modules/nav-btn';
 
 const navLinks = pageHeader.querySelectorAll('.nav__link');
 

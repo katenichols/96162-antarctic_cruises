@@ -5,7 +5,7 @@
 
 .card__first {
   display: block;
-  padding: 329px 30px 30px 30px;
+  padding: 336px 30px 23px 30px;
 
   @media (max-width: $vp-1024) {
     padding: 332px 35px 27px 35px;
@@ -21,7 +21,7 @@
 
   display: none;
   min-height: 386px;
-  padding: 29px 25px 0 25px;
+  padding: 28px 25px 0 25px;
 
   background-color: $color-tangaroa;
 
@@ -99,6 +99,7 @@
 
 .card__text {
   display: block;
+
   @include font-group($size-14, $line-140);
   align-items: center;
   color: $color-quartz;
@@ -106,7 +107,7 @@
 
 .card__link {
   position: absolute;
-  bottom: 34px;
+  bottom: 35px;
   left: 25px;
 
   display: block;

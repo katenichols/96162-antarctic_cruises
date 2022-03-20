@@ -1,12 +1,15 @@
 .catalog {
   padding-top: 110px;
+  padding-bottom: 120px;
 
   @media (max-width: $vp-1024) {
     padding-top: 90px;
+    padding-bottom: 100px;
   }
 
   @media (max-width: $vp-678) {
     padding-top: 56px;
+    padding-bottom: 65px;
   }
 }
 

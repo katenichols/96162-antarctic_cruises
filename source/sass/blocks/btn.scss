@@ -12,7 +12,7 @@
   transition: opacity $trans-default;
 
   &--red {
-    background-color: red;
+    background-color: $color-error;
   }
 
   &:disabled {

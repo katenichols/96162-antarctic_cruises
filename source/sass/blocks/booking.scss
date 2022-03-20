@@ -1,0 +1,115 @@
+.booking {
+  width: 100%;
+
+  background-image: url("../../img/booking-back-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $color-sky-blue;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/booking-back-desktop@2x.jpg");
+  }
+
+  @media (max-width: $vp-1024) {
+    background-image: url("../../img/booking-back-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/booking-back-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $vp-514) {
+    background-image: url("../../img/booking-back-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/booking-back-mobile@2x.jpg");
+    }
+  }
+}
+
+.booking__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 463px;
+  padding: 50px 0;
+
+  @media (max-width: $vp-1162) {
+    grid-template-columns: 1fr 403px;
+  }
+
+  @media (max-width: $vp-1024) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: $vp-480) {
+    padding: 59px 0 65px 0;
+  }
+}
+
+.booking__wrapper-inner {
+  padding: 162px 60px 171px 60px;
+
+  @media (max-width: $vp-1122) {
+    padding-right: 25px;
+    padding-left: 0;
+  }
+
+  @media (max-width: $vp-1024) {
+    width: 100%;
+    padding: 88px 0 51px 0;
+  }
+
+  @media (max-width: $vp-480) {
+    padding: 0 0 33px 0;
+  }
+}
+
+.booking__title {
+  margin-top: 0;
+  margin-bottom: 8px;
+
+  @include font-group-bold($size-40, $line-150);
+  color: $color-tangaroa;
+
+  @media (max-width: $vp-1024) {
+    margin-bottom: 6px;
+    font-size: 34px;
+  }
+
+  @media (max-width: $vp-514) {
+    margin-bottom: 13px;
+
+    @include font-group-small($size-24, $line-130);
+  }
+}
+
+.booking__text {
+  margin: 0;
+
+  @include font-group($size-18, $line-150);
+  color: $color-tangaroa;
+
+  @media (max-width: $vp-514) {
+    @include font-group-small($size-16, $line-140);
+  }
+}
+
+.booking__br {
+  &--mobile {
+    display: none;
+  }
+
+  @media (max-width: $vp-514) {
+    &--desktop {
+      display: none;
+    }
+
+    &--mobile {
+      display: inline;
+    }
+  }
+}

@@ -401,23 +401,23 @@
             <div class="booking__wrapper">
               <div class="booking__wrapper-inner">
                 <h2 class="booking__title">Раннее бронирование</h2>
-                <p class="booking__text">Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>
+                <p class="booking__text">Забронируйте тур <br class="booking__br booking__br--mobile">за 3-6 месяцев <br class="booking__br booking__br--desktop">до даты выезда <br class="booking__br booking__br--mobile">и сэкономьте до 50%</p>
               </div>
-              <form action="https://echo.htmlacademy.ru" class="booking__form form" method="post" autocomplete="off">
-                <p class="form__title"></p>
+              <form action="https://echo.htmlacademy.ru" class="booking__form form" method="post" enctype="multipart/form-data" autocomplete="off" target="_blank" data-form>
+                <p class="form__title">Оставьте заявку <br class="form__title-br">и мы свяжемся с вами в ближайшее время</p>
                 <p class="form__input-block">
                   <label for="name" class="form__label visually-hidden"></label>
-                  <input type="text" class="form__input" id="name" placeholder="Имя"></p>
+                  <input type="text" class="form__input" id="name" placeholder="Имя" data-name></p>
                 <p class="form__input-block">
                   <label for="phone" class="form__label visually-hidden"></label>
-                  <input type="tel" class="form__input" id="phone" placeholder="Телефон"></p>
+                  <input type="tel" class="form__input" id="phone" placeholder="Телефон" data-phone></p>
                 <p class="form__input-block">
                   <label for="email" class="form__label visually-hidden"></label>
-                  <input type="email" class="form__input" id="email" placeholder="Email"></p>
-                <p class="form__input-block">
-                  <label for="assent" class="form__label visually-hidden"></label>
-                  <input type="checkbox" class="form__input" id="assent"></p>
-                <button class="form__btn">Оставить заявку</button>
+                  <input type="email" class="form__input" id="email" placeholder="Email" data-email></p>
+                <p class="form__input-block form__input-block--checkbox">
+                  <input type="checkbox" class="form__input form__input--checkbox visually-hidden" id="assent" data-assent>
+                  <label for="assent" class="form__label form__label--checkbox" data-label-checkbox>Я согласен на обработку моих персональных данных</label></p>
+                <button class="form__btn" data-form-btn>Оставить заявку</button>
               </form>
             </div>
           </div>

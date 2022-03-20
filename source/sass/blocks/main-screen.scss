@@ -46,6 +46,7 @@
 
   @media (max-width: $vp-974) {
     margin-left: 0;
+
     @include font-group-small($size-18, $auto);
   }
 

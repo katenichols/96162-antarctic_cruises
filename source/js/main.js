@@ -1,16 +1,14 @@
-import { iosVhFix } from './utils/ios-vh-fix';
-import { initModals } from './modules/modals/init-modals';
+import {iosVhFix} from './utils/ios-vh-fix';
+import {initModals} from './modules/modals/init-modals';
 import './modules/anchors';
 import './modules/nav-link-click';
 import './modules/nav-btn';
-import { navBtn } from './modules/nav-btn';
-import { pageHeader, pageHeaderWrapper, pageHeaderPicture, nav, navList } from './modules/nav-btn';
-
+import './modules/form';
+import {navBtn} from './modules/nav-btn';
+import {pageHeader, pageHeaderWrapper, pageHeaderPicture, nav, navList} from './modules/nav-btn';
 
 const pageHeaderPictureNoJs = document.querySelector('[data-header-picture-nojs]');
 const containerNoJs = document.querySelector('[data-container-nojs]');
-
-
 
 // ---------------------------------
 
