@@ -29,6 +29,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: $color-map;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../../img/map-desktop@2x.jpg");
@@ -139,5 +140,6 @@
 
   @media (max-width: $vp-1162) {
     display: inline;
+    vertical-align: middle;
   }
 }

@@ -672,6 +672,7 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: #004076;
 }
 
 .page-header--no-js {
@@ -698,6 +699,7 @@ ul {
   display: inline-block;
   width: 70px;
   margin-right: 33px;
+  vertical-align: middle;
 }
 
 .page-header__picture-modal {
@@ -1254,11 +1256,11 @@ ul {
   background-color: #f9fbfd;
 }
 
-.form input[type='checkbox']:hover + label {
+.form input[type="checkbox"]:hover + label {
   cursor: pointer;
 }
 
-.form input[type='checkbox']:checked + label::before {
+.form input[type="checkbox"]:checked + label::before {
   background-image: url("../../img/sprite/icon-checkbox-mark.svg");
 }
 
@@ -1319,6 +1321,7 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: #d8e4cd;
 }
 
 .contacts__inner-wrapper {
@@ -1383,6 +1386,7 @@ ul {
   display: inline-flex;
   margin: 10px 0;
   padding: 10px 20px;
+  vertical-align: middle;
   color: #ffffff;
   background-color: #88d0ed;
   border: none;
@@ -1582,6 +1586,7 @@ ul {
 
   .contacts br {
     display: inline;
+    vertical-align: middle;
   }
 }
 
@@ -2185,6 +2190,7 @@ ul {
 
   .booking__br--mobile {
     display: inline;
+    vertical-align: middle;
   }
 }
 
@@ -2236,6 +2242,7 @@ ul {
 
   .form br {
     display: inline;
+    vertical-align: middle;
   }
 
   .form p {
