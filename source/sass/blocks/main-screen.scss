@@ -14,7 +14,7 @@
   }
 }
 
-.main-screen__title {
+.main-screen h1 {
   margin: 0 auto 12px 95px;
 
   @include font-group-bold($size-54, $auto);
@@ -38,7 +38,7 @@
   }
 }
 
-.main-screen__text {
+.main-screen p {
   margin: 0 0 0 95px;
 
   @include font-group($size-20, $auto);
@@ -55,7 +55,7 @@
   }
 }
 
-.main-screen__br {
+.main-screen br {
   display: none;
 
   @media (max-width: $vp-514) {

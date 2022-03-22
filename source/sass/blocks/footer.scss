@@ -19,7 +19,7 @@
   }
 }
 
-.footer__picture {
+.footer picture {
   width: 70px;
   margin-right: 40px;
 
@@ -72,7 +72,7 @@
   }
 }
 
-.footer__nav-link {
+.footer a {
   @include font-group-medium($size-16, $auto);
   color: $color-alice-blue;
 

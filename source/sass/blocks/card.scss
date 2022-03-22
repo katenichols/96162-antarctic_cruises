@@ -3,7 +3,7 @@
   z-index: 0;
 }
 
-.card__first {
+.card__content {
   display: block;
   padding: 336px 30px 23px 30px;
 
@@ -16,34 +16,41 @@
   }
 }
 
-.card__second {
-  position: relative;
+.card__description {
+  position: absolute;
+  top: 0;
+  left: 0;
 
   display: none;
+  width: 260px;
   min-height: 386px;
-  padding: 28px 25px 0 25px;
+  padding: 28px 25px 75px 25px;
 
   background-color: $color-tangaroa;
 
   @media (max-width: $vp-1024) {
-    padding: 29px 35px 0 35px;
+    width: 309px;
+    padding: 29px 35px 75px 35px;
   }
 
   @media (max-width: $vp-678) {
+    position: relative;
+
+    width: 270px;
     padding-top: 28px;
     padding-left: 25px;
   }
 }
 
-.card:hover > .card__first {
+.card:hover > .card__content {
   display: none;
 }
 
-.card:hover > .card__second {
+.card:hover > .card__description {
   display: block;
 }
 
-.card__picture {
+.card__content picture {
   position: absolute;
   top: 0;
   left: 0;
@@ -52,7 +59,7 @@
   line-height: 0;
 }
 
-.card__image {
+.card__content img {
   width: 260px;
   height: 386px;
 
@@ -65,7 +72,7 @@
   }
 }
 
-.card__title {
+.card__content p {
   position: relative;
   z-index: 10;
 
@@ -73,13 +80,17 @@
 
   @include font-group-medium($size-18, $line-150);
   color: $color-alice-blue;
-
-  &--second {
-    margin-bottom: 14px;
-  }
 }
 
-.card__text-block {
+.card__description h4 {
+  margin-top: 0;
+  margin-bottom: 14px;
+
+  @include font-group-medium($size-18, $line-150);
+  color: $color-alice-blue;
+}
+
+.card__description div {
   margin-top: 0;
   margin-bottom: 11px;
 
@@ -88,7 +99,7 @@
   }
 }
 
-.card__subtitle {
+.card__description p {
   display: block;
 
   margin-bottom: 2px;
@@ -97,7 +108,7 @@
   color: $color-alice-blue;
 }
 
-.card__text {
+.card__description span {
   display: block;
 
   @include font-group($size-14, $line-140);
@@ -105,7 +116,7 @@
   color: $color-quartz;
 }
 
-.card__link {
+.card__description a {
   position: absolute;
   bottom: 35px;
   left: 25px;

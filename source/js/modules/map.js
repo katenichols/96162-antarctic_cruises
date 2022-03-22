@@ -1,3 +1,5 @@
+const ymaps = window.ymaps;
+
 ymaps.ready(init);
 
 function init() {
@@ -15,4 +17,4 @@ function init() {
 
   map.geoObjects.add(myPlacemark);
 
-};
+}

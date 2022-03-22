@@ -750,7 +750,7 @@ ul {
   margin-right: 0;
 }
 
-.nav__link {
+.nav a {
   display: block;
   font-family: "Montserrat Medium", "Trebuchet MS", "Helvetica", sans-serif;
   font-style: normal;
@@ -760,7 +760,7 @@ ul {
   color: #f9fbfd;
 }
 
-.nav__list--opened .nav__link {
+.nav__list--opened a {
   color: #011c40;
 }
 
@@ -783,7 +783,7 @@ ul {
   padding: 50px 0 51px 0;
 }
 
-.footer__picture {
+.footer picture {
   width: 70px;
   margin-right: 40px;
 }
@@ -812,7 +812,7 @@ ul {
   margin-right: 0;
 }
 
-.footer__nav-link {
+.footer a {
   font-family: "Montserrat Medium", "Trebuchet MS", "Helvetica", sans-serif;
   font-style: normal;
   font-size: 16px;
@@ -835,7 +835,7 @@ ul {
   margin-right: 0;
 }
 
-.social__link svg {
+.social svg {
   width: 16px;
   height: 16px;
 }
@@ -846,7 +846,7 @@ ul {
   padding-bottom: 278px;
 }
 
-.main-screen__title {
+.main-screen h1 {
   margin: 0 auto 12px 95px;
   font-family: "Montserrat Bold", "Trebuchet MS", "Helvetica", sans-serif;
   font-style: normal;
@@ -856,7 +856,7 @@ ul {
   color: #f9fbfd;
 }
 
-.main-screen__text {
+.main-screen p {
   margin: 0 0 0 95px;
   font-family: "Montserrat", "Trebuchet MS", "Helvetica", sans-serif;
   font-style: normal;
@@ -866,7 +866,7 @@ ul {
   color: #f9fbfd;
 }
 
-.main-screen__br {
+.main-screen br {
   display: none;
 }
 
@@ -885,12 +885,12 @@ ul {
   padding-right: 80px;
 }
 
-.journeys__image {
+.journeys img {
   display: block;
   width: 560px;
 }
 
-.journeys__title {
+.journeys h2 {
   margin: 0 auto 24px 0;
   font-family: "Montserrat Semibold", "Trebuchet MS", "Helvetica", sans-serif;
   font-style: normal;
@@ -900,7 +900,7 @@ ul {
   color: #011c40;
 }
 
-.journeys__text {
+.journeys p {
   max-width: 512px;
   margin: 0;
   font-family: "Montserrat", "Trebuchet MS", "Helvetica", sans-serif;
@@ -922,7 +922,7 @@ ul {
   background-color: #d0e0ee;
 }
 
-.features__title {
+.features h2 {
   margin-top: 0;
   margin-bottom: 49px;
   text-align: center;
@@ -978,7 +978,7 @@ ul {
   background-image: url("../../img/sprite/icon-boat-big.svg");
 }
 
-.feature__title {
+.feature h3 {
   margin-top: 0;
   margin-bottom: 10px;
   font-family: "Montserrat Medium", "Trebuchet MS", "Helvetica", sans-serif;
@@ -989,7 +989,7 @@ ul {
   color: #011c40;
 }
 
-.feature__text {
+.feature p {
   margin: 0;
   font-family: "Montserrat", "Trebuchet MS", "Helvetica", sans-serif;
   font-style: normal;
@@ -1004,7 +1004,7 @@ ul {
   padding-bottom: 120px;
 }
 
-.catalog__title {
+.catalog h2 {
   text-align: center;
   margin-top: 0;
   margin-bottom: 49px;
@@ -1031,28 +1031,31 @@ ul {
   z-index: 0;
 }
 
-.card__first {
+.card__content {
   display: block;
   padding: 336px 30px 23px 30px;
 }
 
-.card__second {
-  position: relative;
+.card__description {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: none;
+  width: 260px;
   min-height: 386px;
-  padding: 28px 25px 0 25px;
+  padding: 28px 25px 75px 25px;
   background-color: #011c40;
 }
 
-.card:hover > .card__first {
+.card:hover > .card__content {
   display: none;
 }
 
-.card:hover > .card__second {
+.card:hover > .card__description {
   display: block;
 }
 
-.card__picture {
+.card__content picture {
   position: absolute;
   top: 0;
   left: 0;
@@ -1060,12 +1063,12 @@ ul {
   line-height: 0;
 }
 
-.card__image {
+.card__content img {
   width: 260px;
   height: 386px;
 }
 
-.card__title {
+.card__content p {
   position: relative;
   z-index: 10;
   margin: 0;
@@ -1077,20 +1080,27 @@ ul {
   color: #f9fbfd;
 }
 
-.card__title--second {
+.card__description h4 {
+  margin-top: 0;
   margin-bottom: 14px;
+  font-family: "Montserrat Medium", "Trebuchet MS", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 500;
+  color: #f9fbfd;
 }
 
-.card__text-block {
+.card__description div {
   margin-top: 0;
   margin-bottom: 11px;
 }
 
-.card__text-block:last-of-type {
+.card__description div:last-of-type {
   margin-bottom: 24px;
 }
 
-.card__subtitle {
+.card__description p {
   display: block;
   margin-bottom: 2px;
   font-family: "Montserrat Medium", "Trebuchet MS", "Helvetica", sans-serif;
@@ -1101,7 +1111,7 @@ ul {
   color: #f9fbfd;
 }
 
-.card__text {
+.card__description span {
   display: block;
   font-family: "Montserrat", "Trebuchet MS", "Helvetica", sans-serif;
   font-style: normal;
@@ -1114,7 +1124,7 @@ ul {
   color: #d8d8d9;
 }
 
-.card__link {
+.card__description a {
   position: absolute;
   bottom: 35px;
   left: 25px;
@@ -1153,7 +1163,7 @@ ul {
   padding: 162px 60px 171px 60px;
 }
 
-.booking__title {
+.booking h2 {
   margin-top: 0;
   margin-bottom: 8px;
   font-family: "Montserrat Bold", "Trebuchet MS", "Helvetica", sans-serif;
@@ -1188,7 +1198,7 @@ ul {
   background-color: #011c40;
 }
 
-.form__title {
+.form h4 {
   margin-top: 0;
   margin-bottom: 28px;
   font-family: "Montserrat Medium", "Trebuchet MS", "Helvetica", sans-serif;
@@ -1199,17 +1209,17 @@ ul {
   color: #f9fbfd;
 }
 
-.form__title-br {
+.form br {
   display: none;
 }
 
-.form__input-block {
+.form p {
   position: relative;
   margin-top: 0;
   margin-bottom: 20px;
 }
 
-.form__input-block--checkbox {
+.form p:last-of-type {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1219,7 +1229,7 @@ ul {
   align-items: center;
 }
 
-.form__label--checkbox {
+.form p:last-of-type label {
   position: relative;
   padding-top: 3px;
   padding-left: 23px;
@@ -1231,7 +1241,7 @@ ul {
   color: #f9fbfd;
 }
 
-.form__label--checkbox::before {
+.form p:last-of-type label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1244,15 +1254,15 @@ ul {
   background-color: #f9fbfd;
 }
 
-.form__input--checkbox:hover + .form__label--checkbox {
+.form input[type='checkbox']:hover + label {
   cursor: pointer;
 }
 
-.form__input--checkbox:checked + .form__label--checkbox::before {
+.form input[type='checkbox']:checked + label::before {
   background-image: url("../../img/sprite/icon-checkbox-mark.svg");
 }
 
-.form__input {
+.form input {
   width: 100%;
   padding: 12px 15px 10px 16px;
   font-family: "Montserrat", "Trebuchet MS", "Helvetica", sans-serif;
@@ -1268,7 +1278,7 @@ ul {
   outline: #ff0000 solid 5px;
 }
 
-.form__btn {
+.form button {
   position: absolute;
   bottom: 50px;
   left: 50px;
@@ -1285,7 +1295,7 @@ ul {
   border: none;
 }
 
-.form__btn:hover {
+.form button:hover {
   cursor: pointer;
 }
 
@@ -1311,19 +1321,13 @@ ul {
   background-position: center;
 }
 
-.contacts__iframe {
-  width: 100%;
-  height: 306px;
-  border: none;
-}
-
 .contacts__inner-wrapper {
   -ms-flex-item-align: start;
   align-self: flex-start;
   padding: 74px 0 76px 100px;
 }
 
-.contacts__title {
+.contacts h4 {
   margin-top: 0;
   margin-bottom: 32px;
   font-family: "Montserrat Medium", "Trebuchet MS", "Helvetica", sans-serif;
@@ -1334,7 +1338,7 @@ ul {
   color: #011c40;
 }
 
-.contacts__text {
+.contacts p {
   position: relative;
   margin-top: 0;
   margin-bottom: 22px;
@@ -1346,10 +1350,10 @@ ul {
   font-weight: 400;
 }
 
-.contacts__text::before {
+.contacts p::before {
   content: "";
   position: absolute;
-  left: 0px;
+  left: 0;
   top: 0;
   width: 18px;
   height: 22px;
@@ -1357,19 +1361,19 @@ ul {
   background-position: 0 center;
 }
 
-.contacts__text--address::before {
+.contacts p:nth-of-type(1)::before {
   background-image: url("../../img/sprite/icon-map-mark.svg");
 }
 
-.contacts__text--phone {
+.contacts p:nth-of-type(2) {
   margin-bottom: 0;
 }
 
-.contacts__text--phone::before {
+.contacts p:nth-of-type(2)::before {
   background-image: url("../../img/sprite/icon-phone.svg");
 }
 
-.contacts__br {
+.contacts br {
   display: none;
 }
 
@@ -1556,31 +1560,27 @@ ul {
     background-image: url("../../img/map-tablet.jpg");
   }
 
-  .contacts__iframe {
-    height: 335px;
-  }
-
   .contacts__inner-wrapper {
     padding: 66px 0 46px 30px;
   }
 
-  .contacts__title {
+  .contacts h4 {
     margin-bottom: 28px;
   }
 
-  .contacts__text {
+  .contacts p {
     margin-bottom: 21px;
   }
 
-  .contacts__text::before {
+  .contacts p::before {
     top: 4px;
   }
 
-  .contacts__text--phone::before {
+  .contacts p:nth-of-type(2)::before {
     top: -1px;
   }
 
-  .contacts__br {
+  .contacts br {
     display: inline;
   }
 }
@@ -1609,7 +1609,7 @@ ul {
     padding-right: 30px;
   }
 
-  .journeys__image {
+  .journeys img {
     width: 324px;
   }
 
@@ -1618,7 +1618,7 @@ ul {
     padding-bottom: 100px;
   }
 
-  .catalog__title {
+  .catalog h2 {
     font-size: 26px;
   }
 
@@ -1626,19 +1626,20 @@ ul {
     grid-template-columns: repeat(auto-fill, 309px);
   }
 
-  .card__first {
+  .card__content {
     padding: 332px 35px 27px 35px;
   }
 
-  .card__second {
-    padding: 29px 35px 0 35px;
+  .card__description {
+    width: 309px;
+    padding: 29px 35px 75px 35px;
   }
 
-  .card__image {
+  .card__content img {
     width: 309px;
   }
 
-  .card__link {
+  .card__description a {
     bottom: 35px;
     left: 35px;
     width: 239px;
@@ -1666,7 +1667,7 @@ ul {
     padding: 88px 0 51px 0;
   }
 
-  .booking__title {
+  .booking h2 {
     margin-bottom: 6px;
     font-size: 34px;
   }
@@ -1676,11 +1677,11 @@ ul {
     padding-top: 44px;
   }
 
-  .form__title {
+  .form h4 {
     margin-bottom: 27px;
   }
 
-  .form__btn {
+  .form button {
     padding-top: 11px;
     padding-bottom: 11px;
   }
@@ -1720,13 +1721,13 @@ ul {
     margin-right: 0;
   }
 
-  .nav__link {
+  .nav a {
     font-size: 14px;
     line-height: 1.22;
     overflow: hidden;
   }
 
-  .footer__picture {
+  .footer picture {
     width: 38px;
   }
 
@@ -1734,7 +1735,7 @@ ul {
     margin-right: 23px;
   }
 
-  .footer__nav-link {
+  .footer a {
     font-size: 12px;
     line-height: 1.22;
   }
@@ -1752,14 +1753,14 @@ ul {
     padding-bottom: 274px;
   }
 
-  .main-screen__title {
+  .main-screen h1 {
     margin-bottom: 14px;
     margin-left: 0;
     font-size: 50px;
     line-height: 1.22;
   }
 
-  .main-screen__text {
+  .main-screen p {
     margin-left: 0;
     font-size: 18px;
     line-height: 1.22;
@@ -1795,7 +1796,7 @@ ul {
     background-image: url("../../img/sprite/icon-boat-small.svg");
   }
 
-  .feature__title {
+  .feature h3 {
     margin-bottom: 8px;
   }
 }
@@ -1828,7 +1829,7 @@ ul {
     padding: 40px 0 40px 0;
   }
 
-  .footer__picture {
+  .footer picture {
     width: 42px;
     margin-right: 0;
     margin-bottom: 27px;
@@ -1870,7 +1871,7 @@ ul {
     padding-bottom: 93px;
   }
 
-  .journeys__title {
+  .journeys h2 {
     width: 205px;
     margin-top: -9px;
     margin-bottom: 15px;
@@ -1878,7 +1879,7 @@ ul {
     line-height: 140%;
   }
 
-  .journeys__text {
+  .journeys p {
     max-width: 320px;
   }
 
@@ -1887,7 +1888,7 @@ ul {
     padding-bottom: 100px;
   }
 
-  .features__title {
+  .features h2 {
     margin-bottom: 50px;
     font-size: 26px;
   }
@@ -2024,8 +2025,8 @@ ul {
     margin-bottom: 0;
   }
 
-  .nav__list--no-js .nav__link,
-  .nav__list--opened .nav__link {
+  .nav__list--no-js a,
+  .nav__list--opened a {
     font-size: 18px;
     line-height: 1.22;
   }
@@ -2035,13 +2036,13 @@ ul {
     padding-bottom: 178px;
   }
 
-  .main-screen__title {
+  .main-screen h1 {
     margin-bottom: 25px;
     font-size: 36px;
     line-height: 125%;
   }
 
-  .main-screen__text {
+  .main-screen p {
     font-size: 16px;
     line-height: 140%;
   }
@@ -2058,11 +2059,11 @@ ul {
     padding-right: 0;
   }
 
-  .journeys__image {
+  .journeys img {
     width: 100%;
   }
 
-  .journeys__text {
+  .journeys p {
     max-width: 100%;
     margin-bottom: 34px;
   }
@@ -2074,7 +2075,7 @@ ul {
     padding-bottom: 65px;
   }
 
-  .catalog__title {
+  .catalog h2 {
     margin-bottom: 31px;
     font-size: 24px;
   }
@@ -2083,20 +2084,22 @@ ul {
     grid-template-columns: repeat(auto-fill, 270px);
   }
 
-  .card__first {
+  .card__content {
     padding: 341px 25px 18px 25px;
   }
 
-  .card__second {
+  .card__description {
+    position: relative;
+    width: 270px;
     padding-top: 28px;
     padding-left: 25px;
   }
 
-  .card__image {
+  .card__content img {
     width: 270px;
   }
 
-  .card__link {
+  .card__description a {
     left: 25px;
     width: 220px;
     padding-top: 9px;
@@ -2122,10 +2125,6 @@ ul {
     background-position: top;
   }
 
-  .contacts__iframe {
-    height: 316px;
-  }
-
   .contacts__inner-wrapper {
     padding: 0 0 14px 0;
   }
@@ -2147,7 +2146,7 @@ ul {
     padding-right: 15px;
   }
 
-  .feature__title {
+  .feature h3 {
     width: 170px;
     margin-bottom: 9px;
     line-height: 140%;
@@ -2161,7 +2160,7 @@ ul {
     padding-top: 20px;
   }
 
-  .main-screen__br {
+  .main-screen br {
     display: block;
   }
 
@@ -2169,7 +2168,7 @@ ul {
     background-image: url("../../img/booking-back-mobile.jpg");
   }
 
-  .booking__title {
+  .booking h2 {
     margin-bottom: 13px;
     font-size: 24px;
     line-height: 130%;
@@ -2212,7 +2211,7 @@ ul {
     top: 0;
   }
 
-  .features__title {
+  .features h2 {
     margin-bottom: 31px;
     font-size: 24px;
   }
@@ -2235,19 +2234,19 @@ ul {
     text-align: center;
   }
 
-  .form__title-br {
+  .form br {
     display: inline;
   }
 
-  .form__input-block {
+  .form p {
     width: 100%;
   }
 
-  .form__input-block--checkbox {
+  .form p:last-of-type {
     margin-bottom: 26px;
   }
 
-  .form__label--checkbox {
+  .form p:last-of-type label {
     width: 175px;
     padding-top: 0;
     padding-left: 28px;
@@ -2255,12 +2254,12 @@ ul {
     line-height: 120%;
   }
 
-  .form__label--checkbox::before {
+  .form p:last-of-type label::before {
     width: 20px;
     height: 20px;
   }
 
-  .form__btn {
+  .form button {
     position: relative;
     bottom: auto;
     left: auto;
@@ -2282,7 +2281,7 @@ ul {
     padding: 0 33px;
   }
 
-  .form__title {
+  .form h4 {
     width: 214px;
     margin: 0 auto 28px;
     line-height: 140%;
@@ -2320,11 +2319,11 @@ ul {
     top: -1px;
   }
 
-  .main-screen__title {
+  .main-screen h1 {
     margin-bottom: 12px;
   }
 
-  .journeys__title {
+  .journeys h2 {
     margin-top: -8px;
     font-size: 24px;
   }

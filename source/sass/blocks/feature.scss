@@ -78,7 +78,7 @@
   }
 }
 
-.feature__title {
+.feature h3 {
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -97,7 +97,7 @@
   }
 }
 
-.feature__text {
+.feature p {
   margin: 0;
 
   @include font-group($size-14, $line-140);

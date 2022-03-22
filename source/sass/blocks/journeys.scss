@@ -31,7 +31,7 @@
   }
 }
 
-.journeys__image {
+.journeys img {
   display: block;
   width: 560px;
 
@@ -44,8 +44,7 @@
   }
 }
 
-.journeys__title {
-  // width: 512px;
+.journeys h2 {
   margin: 0 auto 24px 0;
 
   @include font-group-semibold($size-28, $line-150);
@@ -65,7 +64,7 @@
   }
 }
 
-.journeys__text {
+.journeys p {
   max-width: 512px;
   margin: 0;
 
