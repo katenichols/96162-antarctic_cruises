@@ -876,6 +876,9 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-column-gap: 80px;
+  -moz-column-gap: 80px;
+  column-gap: 80px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -884,7 +887,6 @@ ul {
 
 .journeys__inner-wrapper {
   padding-top: 56px;
-  padding-right: 80px;
 }
 
 .journeys img {
@@ -1610,8 +1612,8 @@ ul {
 }
 
 @media (max-width: 1024px) {
-  .journeys__inner-wrapper {
-    padding-right: 30px;
+  .journeys__wrapper {
+    gap: 30px;
   }
 
   .journeys img {
@@ -2058,10 +2060,7 @@ ul {
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 65px 0;
-  }
-
-  .journeys__inner-wrapper {
-    padding-right: 0;
+    gap: 0;
   }
 
   .journeys img {

@@ -1,7 +1,12 @@
 .journeys__wrapper {
   display: flex;
+  column-gap: 80px;
   justify-content: space-between;
   padding: 120px 0;
+
+  @media (max-width: $vp-1024) {
+    gap: 30px;
+  }
 
   @media (max-width: $vp-768) {
     padding-top: 100px;
@@ -11,23 +16,15 @@
   @media (max-width: $vp-728) {
     flex-direction: column;
     padding: 65px 0;
+    gap: 0;
   }
 }
 
 .journeys__inner-wrapper {
   padding-top: 56px;
-  padding-right: 80px;
 
   @media (max-width: $vp-1210) {
     padding-top: 0;
-  }
-
-  @media (max-width: $vp-1024) {
-    padding-right: 30px;
-  }
-
-  @media (max-width: $vp-728) {
-    padding-right: 0;
   }
 }
 
