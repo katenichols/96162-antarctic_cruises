@@ -71,9 +71,9 @@ input,
 textarea {
   border-radius: 0;
 
-  &::placeholder {
-    opacity: 1;
-  }
+  // &::placeholder {
+  //   opacity: 1;
+  // }
 
   &:invalid {
     box-shadow: none;

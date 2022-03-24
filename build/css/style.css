@@ -479,31 +479,6 @@ textarea {
   border-radius: 0;
 }
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  opacity: 1;
-}
-
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-  opacity: 1;
-}
-
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  opacity: 1;
-}
-
-input::-ms-input-placeholder,
-textarea::-ms-input-placeholder {
-  opacity: 1;
-}
-
-input::placeholder,
-textarea::placeholder {
-  opacity: 1;
-}
-
 input:invalid,
 textarea:invalid {
   -webkit-box-shadow: none;
@@ -680,6 +655,16 @@ ul {
   top: 0;
   padding-top: 35px;
   background-color: #004076;
+}
+
+.page-header__overlay--modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .page-header__wrapper {
@@ -1003,6 +988,10 @@ ul {
   color: #011c40;
 }
 
+.feature:last-of-type p {
+  width: 241px;
+}
+
 .catalog {
   padding-top: 110px;
   padding-bottom: 120px;
@@ -1202,7 +1191,7 @@ ul {
   background-color: #011c40;
 }
 
-.form h4 {
+.form h5 {
   margin-top: 0;
   margin-bottom: 28px;
   font-family: "Montserrat Medium", "Trebuchet MS", "Helvetica", sans-serif;
@@ -1269,12 +1258,58 @@ ul {
 .form input {
   width: 100%;
   padding: 12px 15px 10px 16px;
+  font-family: "Montserrat Semibold", "Trebuchet MS", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 600;
+  color: #011c40;
+  border: none;
+}
+
+.form input::-webkit-input-placeholder {
   font-family: "Montserrat", "Trebuchet MS", "Helvetica", sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 150%;
   font-weight: 400;
-  border: none;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::-moz-placeholder {
+  font-family: "Montserrat", "Trebuchet MS", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input:-ms-input-placeholder {
+  font-family: "Montserrat", "Trebuchet MS", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::-ms-input-placeholder {
+  font-family: "Montserrat", "Trebuchet MS", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::placeholder {
+  font-family: "Montserrat", "Trebuchet MS", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
+  color: rgba(1, 28, 64, 0.7);
 }
 
 .form__input--invalid,
@@ -1319,7 +1354,7 @@ ul {
   width: 560px;
   height: 306px;
   line-height: 0;
-  background-image: url("../../img/map-desktop.jpg");
+  background-image: url("../../img/content/map-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1563,7 +1598,7 @@ ul {
   .contacts__map {
     width: 324px;
     height: 335px;
-    background-image: url("../../img/map-tablet.jpg");
+    background-image: url("../../img/content/map-tablet.jpg");
   }
 
   .contacts__inner-wrapper {
@@ -1594,7 +1629,7 @@ ul {
 
 @media (max-width: 1162px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1162px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1162px) and (min-resolution: 2dppx) {
   .contacts__map {
-    background-image: url("../../img/map-tablet@2x.jpg");
+    background-image: url("../../img/content/map-tablet@2x.jpg");
   }
 }
 
@@ -1684,7 +1719,7 @@ ul {
     padding-top: 44px;
   }
 
-  .form h4 {
+  .form h5 {
     margin-bottom: 27px;
   }
 
@@ -1805,6 +1840,10 @@ ul {
 
   .feature h3 {
     margin-bottom: 8px;
+  }
+
+  .feature:last-of-type p {
+    width: auto;
   }
 }
 
@@ -1939,6 +1978,7 @@ ul {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
     display: block;
     width: 285px;
     height: 568px;
@@ -2125,7 +2165,7 @@ ul {
   .contacts__map {
     width: 100%;
     height: 316px;
-    background-image: url("../../img/map-mobile.jpg");
+    background-image: url("../../img/content/map-mobile.jpg");
     background-position: top;
   }
 
@@ -2136,7 +2176,7 @@ ul {
 
 @media (max-width: 678px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 678px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 678px) and (min-resolution: 2dppx) {
   .contacts__map {
-    background-image: url("../../img/map-mobile@2x.jpg");
+    background-image: url("../../img/content/map-mobile@2x.jpg");
   }
 }
 
@@ -2154,6 +2194,18 @@ ul {
     width: 170px;
     margin-bottom: 9px;
     line-height: 140%;
+  }
+
+  .feature p {
+    width: 233px;
+  }
+
+  .feature:first-of-type p {
+    width: 255px;
+  }
+
+  .feature:last-of-type p {
+    width: 233px;
   }
 }
 
@@ -2287,7 +2339,7 @@ ul {
     padding: 0 33px;
   }
 
-  .form h4 {
+  .form h5 {
     width: 214px;
     margin: 0 auto 28px;
     line-height: 140%;
@@ -2354,6 +2406,6 @@ ul {
   }
 
   .contacts__map {
-    background-image: url("../../img/map-desktop@2x.jpg");
+    background-image: url("../../img/content/map-desktop@2x.jpg");
   }
 }

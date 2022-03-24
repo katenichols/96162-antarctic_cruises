@@ -5,6 +5,20 @@ const inputEmail = form.querySelector('[data-email');
 const inputCheckbox = form.querySelector('[data-assent]');
 const labelCheckbox = form.querySelector('[data-label-checkbox]');
 
+const formData = {
+  name: '',
+  phone: '',
+  email: '',
+  assent: '',
+};
+
+let data = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : formData;
+
+inputName.value = data.name;
+inputPhone.value = data.phone;
+inputEmail.value = data.email;
+inputCheckbox.checked = data.assent;
+
 inputName.addEventListener('focus', () => {
   if (inputName.classList.contains('form__input--invalid')) {
     inputName.classList.remove('form__input--invalid');
@@ -34,20 +48,12 @@ labelCheckbox.addEventListener('click', () => {
 
 const isPhone = () => {
   const regPhone = /^\d[\d\(\)\ -]{4,14}\d$/;
-  if (!inputPhone.value === '') {
-    return regPhone.test(inputPhone.value);
-  } else {
-    return false;
-  }
+  return regPhone.test(inputPhone.value);
 };
 
 const isEmail = () => {
-  const regMail = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
-  if (inputPhone.value === '' && !inputEmail.value === '') {
-    return regMail.test(inputEmail.value);
-  } else {
-    return false;
-  }
+  const regMail = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
+  return regMail.test(inputEmail.value);
 };
 
 const isAssent = () => {
@@ -62,21 +68,40 @@ const addClasslist = (elem) => {
   elem.classList.add('form__input--invalid');
 };
 
+inputPhone.addEventListener('input', () => {
+  if (inputPhone.classList.contains('form__input--invalid')) {
+    inputPhone.classList.remove('form__input--invalid');
+  }
+
+  if (!isPhone()) {
+    addClasslist(inputPhone);
+  }
+});
+
 form.addEventListener('submit', (evt) => {
   let isName = inputName.value;
-  if (!isName || !isAssent() && (!isPhone() || !isEmail())) {
+
+  if (!isName || !isAssent() || !isPhone() || !isEmail()) {
     evt.preventDefault();
+
     if (!isName) {
       addClasslist(inputName);
     }
-    if (!isPhone() && inputEmail.value === '') {
+    if (!isPhone()) {
       addClasslist(inputPhone);
     }
-    if (isPhone() && !isEmail()) {
+    if (!isEmail()) {
       addClasslist(inputEmail);
     }
     if (!isAssent()) {
       labelCheckbox.classList.add('form__label--checkbox-invalid');
     }
   }
+
+  data.name = inputName.value;
+  data.phone = inputPhone.value;
+  data.email = inputEmail.value;
+  data.assent = inputCheckbox.checked;
+
+  localStorage.setItem('items', JSON.stringify(data));
 });

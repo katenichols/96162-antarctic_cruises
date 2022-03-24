@@ -102,4 +102,26 @@
 
   @include font-group($size-14, $line-140);
   color: $color-tangaroa;
+
+  @media (max-width: $vp-537) {
+    width: 233px;
+  }
+}
+
+.feature:first-of-type p {
+  @media (max-width: $vp-537) {
+    width: 255px;
+  }
+}
+
+.feature:last-of-type p {
+    width: 241px;
+
+  @media (max-width: $vp-974) {
+    width: auto;
+  }
+
+  @media (max-width: $vp-537) {
+    width: 233px;
+  }
 }

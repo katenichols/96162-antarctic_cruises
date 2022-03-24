@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import './modules/anchors';
-import './modules/nav-link-click';
+import './modules/header-modal';
 import './modules/nav-btn';
 import './modules/form';
 import './modules/map';
@@ -10,7 +10,7 @@ import {pageHeader, pageHeaderWrapper, pageHeaderPicture, nav, navList} from './
 
 const pageHeaderPictureNoJs = document.querySelector('[data-header-picture-nojs]');
 const containerNoJs = document.querySelector('[data-container-nojs]');
-
+export const lastFocus = document.activeElement;
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {

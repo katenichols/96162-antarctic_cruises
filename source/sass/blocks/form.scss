@@ -21,7 +21,7 @@
   }
 }
 
-.form h4 {
+.form h5 {
   margin-top: 0;
   margin-bottom: 28px;
 
@@ -123,9 +123,15 @@
   width: 100%;
   padding: 12px 15px 10px 16px;
 
-  @include font-group($size-14, $line-150);
+  @include font-group-semibold($size-14, $line-150);
+  color: $color-tangaroa;
 
   border: none;
+
+  &::placeholder {
+    @include font-group($size-14, $line-150);
+    color: $color-tangaroa-fade;
+  }
 }
 
 .form__input--invalid,

@@ -10,84 +10,86 @@
       name="description"
       content="Личный проект «Круизы в Антарктику», HTML Academy"/>
     <title>Круизы в Антарктику</title>
-    <link rel="preload" href="/fonts/Montserrat-Bold.woff2" as="font" />
-    <link rel="preload" href="/fonts/Montserrat-Medium.woff2" as="font" />
-    <link rel="preload" href="/fonts/Montserrat-Regular.woff2" as="font" />
-    <link rel="preload" href="/fonts/Montserrat-SemiBold.woff2" as="font" />
-    <link rel="preload" href="/fonts/Montserrat-Bold.woff" as="font" />
-    <link rel="preload" href="/fonts/Montserrat-Medium.woff" as="font" />
-    <link rel="preload" href="/fonts/Montserrat-Regular.woff" as="font" />
-    <link rel="preload" href="/fonts/Montserrat-SemiBold.woff" as="font" />
+    <link href="/fonts/Montserrat-Bold.woff2" as="font" />
+    <link href="/fonts/Montserrat-Medium.woff2" as="font" />
+    <link href="/fonts/Montserrat-Regular.woff2" as="font" />
+    <link href="/fonts/Montserrat-SemiBold.woff2" as="font" />
+    <link href="/fonts/Montserrat-Bold.woff" as="font" />
+    <link href="/fonts/Montserrat-Medium.woff" as="font" />
+    <link href="/fonts/Montserrat-Regular.woff" as="font" />
+    <link href="/fonts/Montserrat-SemiBold.woff" as="font" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
 
-  <body class="page-body">
+  <body class="page-body" data-body>
     <div class="wrapper">
       <header class="page-header page-header--no-js" data-header>
         <div class="container container--no-js" data-container-nojs>
-          <div class="page-header__wrapper page-header__wrapper--no-js" data-header-wrapper>
-            <picture class="page-header__picture" data-header-picture>
-              <source
-                media="(maxn-width: 728px)"
-                srcset="img/svg/logo-mobile.svg"/>
-              <source
-                media="(max-width: 1024px)"
-                srcset="img/svg/logo-tablet.svg"/>
-              <!-- 1x: 70px; 2x: 140px -->
-              <img
-                class="page-header__logo logo"
-                src="img/svg/logo-desktop.svg"
-                width="70"
-                height="38"
-                alt="Круизы в Антарктику"/>
-            </picture>
-            <picture class="page-header__picture-no-js" data-header-picture-nojs>
-              <source
-                media="(max-width: 728px)"
-                srcset="img/svg/logo-mobile.svg"/>
-              <source
-                media="(max-width: 1024px)"
-                srcset="img/svg/logo-tablet.svg"/>
+          <div class="page-header__overlay" data-header-overlay>
+            <div class="page-header__wrapper page-header__wrapper--no-js" data-header-wrapper>
+              <picture class="page-header__picture" data-header-picture>
+                <source
+                  media="(maxn-width: 728px)"
+                  srcset="img/svg/logo-mobile.svg"/>
+                <source
+                  media="(max-width: 1024px)"
+                  srcset="img/svg/logo-tablet.svg"/>
                 <!-- 1x: 70px; 2x: 140px -->
-              <img
-                class="page-header__logo logo"
-                src="img/svg/logo-desktop.svg"
-                width="70"
-                height="38"
-                alt="Круизы в Антарктику"/>
-            </picture>
-            <picture class="page-header__picture-modal visually-hidden" data-header-picture-modal>
-              <source
-                media="(max-width: 728px)"
-                srcset="img/svg/logo-modal.svg"/>
-              <source
-                media="(max-width: 1024px)"
-                srcset="img/svg/logo-tablet.svg"/>
-                <!-- 1x: 42px; 2x: 840px -->
-              <img
-                class="page-header__logo logo"
-                src="img/svg/logo-desktop.svg"
-                width="42"
-                height="22"
-                alt="Круизы в Антарктику"/>
-            </picture>
-            <nav class="page-header__nav nav nav--no-js" data-nav>
-              <button type="button" class=" nav__btn nav__btn--no-js" data-nav-btn></button>
-              <ul class="nav__list nav__list--no-js" data-nav-list-nojs>
-                <li class="nav__list-item">
-                  <a href="#features">Преимущества</a>
-                </li>
-                <li class="nav__list-item">
-                  <a href="">Направления</a>
-                </li>
-                <li class="nav__list-item">
-                  <a href="#catalog">Ближайшие круизы</a>
-                </li>
-                <li class="nav__list-item">
-                  <a href="#contacts">Контакты</a>
-                </li>
-              </ul>
-            </nav>
+                <img
+                  class="page-header__logo logo"
+                  src="img/svg/logo-desktop.svg"
+                  width="70"
+                  height="38"
+                  alt="Круизы в Антарктику"/>
+              </picture>
+              <picture class="page-header__picture-no-js" data-header-picture-nojs>
+                <source
+                  media="(max-width: 728px)"
+                  srcset="img/svg/logo-mobile.svg"/>
+                <source
+                  media="(max-width: 1024px)"
+                  srcset="img/svg/logo-tablet.svg"/>
+                  <!-- 1x: 70px; 2x: 140px -->
+                <img
+                  class="page-header__logo logo"
+                  src="img/svg/logo-desktop.svg"
+                  width="70"
+                  height="38"
+                  alt="Круизы в Антарктику"/>
+              </picture>
+              <picture class="page-header__picture-modal visually-hidden" data-header-picture-modal>
+                <source
+                  media="(max-width: 728px)"
+                  srcset="img/svg/logo-modal.svg"/>
+                <source
+                  media="(max-width: 1024px)"
+                  srcset="img/svg/logo-tablet.svg"/>
+                  <!-- 1x: 42px; 2x: 840px -->
+                <img
+                  class="page-header__logo logo"
+                  src="img/svg/logo-desktop.svg"
+                  width="42"
+                  height="22"
+                  alt="Круизы в Антарктику"/>
+              </picture>
+              <nav class="page-header__nav nav nav--no-js" data-nav>
+                <button type="button" class=" nav__btn nav__btn--no-js" data-nav-btn></button>
+                <ul class="nav__list nav__list--no-js" data-nav-list-nojs>
+                  <li class="nav__list-item">
+                    <a href="#features" data-nav-link>Преимущества</a>
+                  </li>
+                  <li class="nav__list-item">
+                    <a href="" data-nav-link>Направления</a>
+                  </li>
+                  <li class="nav__list-item">
+                    <a href="#catalog" data-nav-link>Ближайшие круизы</a>
+                  </li>
+                  <li class="nav__list-item">
+                    <a href="#contacts" data-nav-link>Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
         <section class="main-screen main-screen--no-js">
@@ -127,22 +129,20 @@
               <li class="features__list-item feature">
                 <h3>Небольшой круизный лайнер</h3>
                 <p>
-                  Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей
-                  и даст возможность насладиться видами и природой.
+                  Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность
+                  насладиться видами и&nbsp;природой.
                 </p>
               </li>
               <li class="features__list-item feature">
                 <h3>Система все включено</h3>
                 <p>
-                  Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар
-                  доступны для вас 24 часа.
+                  Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.
                 </p>
               </li>
               <li class="features__list-item feature">
                 <h3>Экскурсионные туры на Zodiac</h3>
                 <p>
-                  Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac
-                  в сопровождении опытных экскурсоводов.
+                  Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiac в&nbsp;сопровождении опытных экскурсоводов.
                 </p>
               </li>
             </ul>
@@ -413,18 +413,18 @@
                 <p>Забронируйте тур <br class="booking__br booking__br--mobile">за 3-6 месяцев <br class="booking__br booking__br--desktop">до даты выезда <br class="booking__br booking__br--mobile">и сэкономьте до 50%</p>
               </div>
               <form action="https://echo.htmlacademy.ru" class="booking__form form" method="post" enctype="multipart/form-data" autocomplete="off" target="_blank" data-form>
-                <h4 class="form__title">Оставьте заявку <br>и мы свяжемся с вами в ближайшее время</h4>
+                <h5>Оставьте заявку <br>и мы свяжемся с вами в ближайшее время</h5>
                 <p>
                   <label for="name" class="form__label visually-hidden"></label>
-                  <input type="text" class="form__input" id="name" placeholder="Имя" data-name></p>
+                  <input type="text" class="form__input" id="name" placeholder="Имя" required data-name></p>
                 <p>
                   <label for="phone" class="form__label visually-hidden"></label>
-                  <input type="tel" class="form__input" id="phone" placeholder="Телефон" data-phone></p>
+                  <input type="tel" class="form__input" id="phone" placeholder="Телефон" required data-phone></p>
                 <p>
                   <label for="email" class="form__label visually-hidden"></label>
-                  <input type="email" class="form__input" id="email" placeholder="Email" data-email></p>
+                  <input type="email" class="form__input" id="email" placeholder="Email" required data-email></p>
                 <p>
-                  <input type="checkbox" class="form__input form__input--checkbox visually-hidden" id="assent" data-assent>
+                  <input type="checkbox" class="form__input form__input--checkbox visually-hidden" id="assent" required data-assent>
                   <label for="assent" class="form__label form__label--checkbox" data-label-checkbox>Я согласен на обработку моих персональных данных</label></p>
                 <button class="form__btn" data-form-btn>Оставить заявку</button>
               </form>
@@ -551,7 +551,6 @@
       </div>
     </div>
 
-    <!-- <script src="js/vendor.min.js"></script> -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/main.min.js"></script>
   </body>
