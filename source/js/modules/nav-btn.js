@@ -18,8 +18,13 @@ const onEscKeydown = (evt) => {
 };
 
 export const classListsToggle = () => {
-  body.style.position = 'fixed';
-  body.style.top = '0';
+  if (!pageHeader.classList.contains('page-header--modal')) {
+    body.style.position = 'fixed';
+    body.style.top = '0';
+  } else {
+    body.style.position = 'relative';
+    body.style.top = 'auto';
+  }
   pageHeader.classList.toggle('page-header--modal');
   pageHeaderOverlay.classList.toggle('page-header__overlay--modal');
   pageHeaderWrapper.classList.toggle('page-header__wrapper--modal');

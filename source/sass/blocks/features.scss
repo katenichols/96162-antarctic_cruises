@@ -3,14 +3,14 @@
   padding-top: 110px;
   padding-bottom: 120px;
 
-  background-image: url("../../img/features-back.jpg");
+  background-image: url("../img/features-back.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: $color-pattens-blue;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/features-back@2x.jpg");
+    background-image: url("../img/features-back@2x.jpg");
   }
 
   @media (max-width: $vp-768) {

@@ -1,8 +1,8 @@
 import {closeModal} from './close-modal';
 import {pageHeader} from './nav-btn';
-import {pageHeaderWrapper} from './nav-btn';
+import {pageHeaderWrapper, pageHeaderOverlay} from './nav-btn';
 
-const navLinks = pageHeader.querySelectorAll('.nav__link');
+const navLinks = pageHeader.querySelectorAll('[data-nav-link]');
 const focusables = pageHeader.querySelectorAll('[data-nav-link], [data-nav-btn');
 const firstFocusable = focusables[0];
 const lastFocusable = focusables[focusables.length - 1];
@@ -32,8 +32,10 @@ document.addEventListener('keydown', (evt) => {
 });
 
 document.addEventListener('click', (evt) => {
-  if (pageHeaderWrapper && evt.target !== pageHeaderWrapper && !pageHeaderWrapper.contains(evt.target)) {
-    closeModal();
+  if (pageHeaderOverlay.classList.contains('page-header__overlay--modal')) {
+    if (evt.target !== pageHeaderWrapper && !pageHeaderWrapper.contains(evt.target) && evt.target !== ('[data-nav-link]')) {
+      closeModal();
+    }
   }
 });
 
