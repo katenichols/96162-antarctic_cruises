@@ -1,8 +1,9 @@
 import {closeModal} from './close-modal';
 import {pageHeader} from './nav-btn';
+// import {anchors} from './anchors';
 import {pageHeaderWrapper, pageHeaderOverlay} from './nav-btn';
 
-const navLinks = pageHeader.querySelectorAll('[data-nav-link]');
+export const navLinks = pageHeader.querySelectorAll('[data-nav-link]');
 const focusables = pageHeader.querySelectorAll('[data-nav-link], [data-nav-btn');
 const firstFocusable = focusables[0];
 const lastFocusable = focusables[focusables.length - 1];

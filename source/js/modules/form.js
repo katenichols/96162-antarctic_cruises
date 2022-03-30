@@ -96,12 +96,12 @@ form.addEventListener('submit', (evt) => {
     if (!isAssent()) {
       labelCheckbox.classList.add('form__label--checkbox-invalid');
     }
+  } else {
+    data.name = inputName.value;
+    data.phone = inputPhone.value;
+    data.email = inputEmail.value;
+    data.assent = inputCheckbox.checked;
+
+    localStorage.setItem('items', JSON.stringify(data));
   }
-
-  data.name = inputName.value;
-  data.phone = inputPhone.value;
-  data.email = inputEmail.value;
-  data.assent = inputCheckbox.checked;
-
-  localStorage.setItem('items', JSON.stringify(data));
 });

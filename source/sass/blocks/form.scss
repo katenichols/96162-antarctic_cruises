@@ -3,7 +3,9 @@
 
   display: block;
   width: 403px;
-  min-height: 455px;
+  height: 455px;
+  margin-top: auto;
+  margin-bottom: auto;
   padding: 43px 50px 50px 50px;
   text-align: left;
 
@@ -14,9 +16,11 @@
     padding-top: 44px;
   }
 
-  @media (max-width: $vp-480) {
+  @media (max-width: $vp-767) {
+    max-width: 403px;
     width: 100%;
-    padding: 34px 30px 40px 30px;
+    height: auto;
+    padding: 35px 30px 40px 30px;
     text-align: center;
   }
 }
@@ -32,20 +36,11 @@
     margin-bottom: 27px;
   }
 
-  @include vp-479 {
+  @media (max-width: $vp-767) {
     width: 214px;
-    margin: 0 auto 28px;
+    margin: 0 auto 29px;
 
-    line-height: 140%;
-  }
-}
-
-.form br {
-  display: none;
-
-  @media (max-width: $vp-480) {
-    display: inline;
-    vertical-align: middle;
+    line-height: 136%;
   }
 }
 
@@ -55,7 +50,7 @@
   margin-top: 0;
   margin-bottom: 20px;
 
-  @media (max-width: $vp-480) {
+  @media (max-width: $vp-767) {
     width: 100%;
   }
 }
@@ -65,7 +60,7 @@
   margin-bottom: 32px;
   align-items: center;
 
-  @media (max-width: $vp-480) {
+  @media (max-width: $vp-767) {
     margin-bottom: 26px;
   }
 }
@@ -94,7 +89,7 @@
     background-color: $color-alice-blue;
   }
 
-  @media (max-width: $vp-480) {
+  @media (max-width: $vp-767) {
     width: 175px;
     padding-top: 0;
     padding-left: 28px;
@@ -140,11 +135,9 @@
 }
 
 .form button {
-  position: absolute;
-  bottom: 50px;
-  left: 50px;
+  position: relative;
 
-  width: calc(100% - 100px);
+  width: 100%;
   padding-top: 10px;
   padding-bottom: 12px;
 
@@ -161,14 +154,6 @@
   @media (max-width: $vp-1024) {
     padding-top: 11px;
     padding-bottom: 11px;
-  }
-
-  @media (max-width: $vp-480) {
-    position: relative;
-    bottom: auto;
-    left: auto;
-
-    width: 100%;
     text-align: center;
   }
 }

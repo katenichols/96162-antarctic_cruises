@@ -5,7 +5,7 @@
   margin-left: 33px;
   align-items: center;
 
-  @media (max-width: $vp-728) {
+  @media (max-width: $vp-767) {
     margin-left: 0;
   }
 }
@@ -25,7 +25,7 @@
 
   display: none;
 
-  @media (max-width: $vp-728) {
+  @media (max-width: $vp-767) {
     display: block;
     width: 24px;
     height: 22px;
@@ -58,7 +58,7 @@
 }
 
 .nav__btn--no-js {
-  @media (max-width: $vp-728) {
+  @media (max-width: $vp-767) {
     display: none;
 
     &::after {
@@ -68,7 +68,7 @@
 }
 
 .is-open {
-  @media (max-width: $vp-728) {
+  @media (max-width: $vp-767) {
     top: -22px;
 
     width: 13px;
@@ -87,22 +87,22 @@
   display: flex;
   flex-wrap: wrap;
 
-  @media (max-width: $vp-728) {
+  @media (max-width: $vp-767) {
     display: none;
   }
 
   &--opened,
   &--no-js {
-    @media (max-width: $vp-728) {
+    @media (max-width: $vp-767) {
       display: block;
       max-height: 453px;
 
-      overflow: scroll;
+      overflow-y: auto;
     }
   }
 
   &--no-js {
-    @media (max-width: $vp-728) {
+    @media (max-width: $vp-767) {
       padding-top: 0;
     }
   }
@@ -115,7 +115,7 @@
     margin-right: 0;
   }
 
-  @media (max-width: $vp-974) {
+  @media (max-width: $vp-1024) {
     margin-right: 23px;
 
     &:last-of-type {
@@ -123,14 +123,14 @@
     }
   }
 
-  @media (max-width: $vp-728) {
+  @media (max-width: $vp-767) {
     margin-right: 0;
   }
 }
 
 .nav__list--no-js .nav__list-item,
 .nav__list--opened .nav__list-item {
-  @media (max-width: $vp-728) {
+  @media (max-width: $vp-767) {
     margin-bottom: 10px;
     padding: 7px 10px 6px 10px;
 
@@ -146,7 +146,7 @@
   @include font-group-medium($size-16, $auto);
   color: $color-alice-blue;
 
-  @media (max-width: $vp-974) {
+  @media (max-width: $vp-1024) {
     @include font-group-small($size-14, $auto);
 
     overflow: hidden;
@@ -155,7 +155,7 @@
 
 .nav__list--no-js a,
 .nav__list--opened a {
-  @media (max-width: $vp-728) {
+  @media (max-width: $vp-767) {
     @include font-group-small($size-18, $auto);
   }
 }

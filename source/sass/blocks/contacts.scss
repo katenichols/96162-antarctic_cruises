@@ -3,19 +3,19 @@
   grid-template-columns: 560px 1fr;
   align-items: center;
   padding-top: 120px;
-  padding-bottom: 112px;
+  padding-bottom: 120px;
 
-  @media (max-width: $vp-1162) {
+  @media (max-width: $vp-1024) {
     grid-template-columns: 324px 1fr;
     padding-top: 100px;
     padding-bottom: 100px;
   }
 
-  @media (max-width: $vp-678) {
+  @media (max-width: $vp-767) {
     display: flex;
     flex-direction: column-reverse;
     padding-top: 58px;
-    padding-bottom: 65px;
+    padding-bottom: 64px;
   }
 }
 
@@ -35,7 +35,7 @@
     background-image: url("../../img/content/map-desktop@2x.jpg");
   }
 
-  @media (max-width: $vp-1162) {
+  @media (max-width: $vp-1024) {
     width: 324px;
     height: 335px;
 
@@ -46,7 +46,7 @@
     }
   }
 
-  @media (max-width: $vp-678) {
+  @media (max-width: $vp-767) {
     width: 100%;
     height: 316px;
 
@@ -63,12 +63,12 @@
   align-self: flex-start;
   padding: 74px 0 76px 100px;
 
-  @media (max-width: $vp-1162) {
+  @media (max-width: $vp-1024) {
     padding: 66px 0 46px 30px;
   }
 
-  @media (max-width: $vp-678) {
-    padding: 0 0 14px 0;
+  @media (max-width: $vp-767) {
+    padding: 0 0 38px 0;
   }
 }
 
@@ -79,7 +79,7 @@
   @include font-group-medium($size-18, $line-150);
   color: $color-tangaroa;
 
-  @media (max-width: $vp-1162) {
+  @media (max-width: $vp-1024) {
     margin-bottom: 28px;
   }
 }
@@ -91,7 +91,7 @@
   margin-bottom: 22px;
   padding-left: 28px;
 
-  @include font-group($size-16, $line-150);
+  @include font-group($size-16, $line-140);
 
   &::before {
     content: "";
@@ -106,8 +106,8 @@
     background-position: 0 center;
   }
 
-  @media (max-width: $vp-1162) {
-    margin-bottom: 21px;
+  @media (max-width: $vp-1024) {
+    margin-bottom: 24px;
 
     &::before {
       top: 4px;
@@ -128,18 +128,9 @@
     background-image: url("../../img/sprite/icon-phone.svg");
   }
 
-  @media (max-width: $vp-1162) {
+  @media (max-width: $vp-1024) {
     &::before {
       top: -1px;
     }
-  }
-}
-
-.contacts br {
-  display: none;
-
-  @media (max-width: $vp-1162) {
-    display: inline;
-    vertical-align: middle;
   }
 }

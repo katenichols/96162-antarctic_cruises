@@ -1,8 +1,8 @@
 .social {
   display: flex;
 
-  @media (max-width: $vp-768) {
-    margin-left: -3px;
+  @media (max-width: $vp-1024) {
+    margin-top: 2px;
   }
 }
 
@@ -13,7 +13,7 @@
     margin-right: 0;
   }
 
-  @media (max-width: $vp-974) {
+  @media (max-width: $vp-1024) {
     margin-right: 23px;
 
     &:last-of-type {
@@ -21,7 +21,7 @@
     }
   }
 
-  @media (max-width: $vp-768) {
+  @media (max-width: $vp-767) {
     margin-right: 19px;
 
     &:nth-of-type(2) {
@@ -30,7 +30,33 @@
   }
 }
 
+.social__item--first {
+  margin-right: 29px;
+
+  @media (max-width: $vp-1024) {
+    margin-right: 20px;
+  }
+}
+
+.social__item a {
+  display: block;
+  padding-top: 3px;
+  text-align: center;
+}
+
+.social__item--first a {
+  @media (max-width: $vp-767) {
+    margin-left: -3px;
+  }
+}
+
 .social svg {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
+
+  @media (max-width: $vp-1024) {
+    width: 16px;
+    height: 16px;
+    padding-top: 0;
+  }
 }

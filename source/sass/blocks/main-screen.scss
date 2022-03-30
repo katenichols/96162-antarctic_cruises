@@ -3,12 +3,12 @@
   padding-top: 270px;
   padding-bottom: 278px;
 
-  @media (max-width: $vp-974) {
+  @media (max-width: $vp-1024) {
     padding-top: 290px;
     padding-bottom: 274px;
   }
 
-  @media (max-width: $vp-728) {
+  @media (max-width: $vp-767) {
     padding-top: 206px;
     padding-bottom: 178px;
   }
@@ -20,14 +20,14 @@
   @include font-group-bold($size-54, $auto);
   color: $color-alice-blue;
 
-  @media (max-width: $vp-974) {
+  @media (max-width: $vp-1024) {
     margin-bottom: 14px;
     margin-left: 0;
 
     @include font-group-small($size-50, $auto);
   }
 
-  @media (max-width: $vp-728) {
+  @media (max-width: $vp-767) {
     margin-bottom: 25px;
 
     @include font-group-small($size-36, $line-125);
@@ -44,13 +44,13 @@
   @include font-group($size-20, $auto);
   color: $color-alice-blue;
 
-  @media (max-width: $vp-974) {
+  @media (max-width: $vp-1024) {
     margin-left: 0;
 
     @include font-group-small($size-18, $auto);
   }
 
-  @media (max-width: $vp-728) {
+  @media (max-width: $vp-767) {
     @include font-group-small($size-16, $line-140);
   }
 }
@@ -58,7 +58,7 @@
 .main-screen br {
   display: none;
 
-  @media (max-width: $vp-514) {
+  @media (max-width: $vp-767) {
     display: block;
   }
 }

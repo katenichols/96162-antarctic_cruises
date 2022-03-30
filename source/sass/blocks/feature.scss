@@ -40,7 +40,8 @@
     }
   }
 
-  @media (max-width: $vp-974) {
+  @media (max-width: $vp-1024) {
+    width: 206px;
     padding: 69px 19px 21px 20px;
 
     &::before {
@@ -49,6 +50,7 @@
     }
 
     &:first-of-type {
+      padding-right: 16px;
       &::before {
         background-image: url("../../img/sprite/icon-ship-small.svg");
       }
@@ -69,12 +71,13 @@
     }
   }
 
-  @media (max-width: $vp-537) {
-    padding-right: 15px;
-  }
+  @media (max-width: $vp-767) {
+    width: 290px;
+    padding-top: 70px;
 
-  @media (max-width: $vp-480) {
-    padding-top: 71px;
+    &:first-of-type {
+      padding-bottom: 20px;
+    }
   }
 }
 
@@ -85,15 +88,15 @@
   @include font-group-medium($size-18, $line-150);
   color: $color-tangaroa;
 
-  @media (max-width: $vp-974) {
-    margin-bottom: 8px;
-  }
-
-  @media (max-width: $vp-537) {
-    width: 170px;
-    margin-bottom: 9px;
+  @media (max-width: $vp-1024) {
+    margin-bottom: 10px;
 
     line-height: 140%;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 170px;
+    margin-bottom: 9px;
   }
 }
 
@@ -103,25 +106,17 @@
   @include font-group($size-14, $line-140);
   color: $color-tangaroa;
 
-  @media (max-width: $vp-537) {
+  @media (max-width: $vp-1024) {
+    line-height: 142%;
+  }
+
+  @media (max-width: $vp-767) {
     width: 233px;
   }
 }
 
 .feature:first-of-type p {
-  @media (max-width: $vp-537) {
+  @media (max-width: $vp-767) {
     width: 255px;
-  }
-}
-
-.feature:last-of-type p {
-    width: 241px;
-
-  @media (max-width: $vp-974) {
-    width: auto;
-  }
-
-  @media (max-width: $vp-537) {
-    width: 233px;
   }
 }

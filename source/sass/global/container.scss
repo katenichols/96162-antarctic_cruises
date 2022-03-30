@@ -2,20 +2,12 @@
   width: 100%;
   padding: 0 103px;
 
-  @media (max-width: $vp-1162) {
-    padding: 0 83px;
-  }
-
-  @include vp-1023 {
-    padding: 0 64px;
-  }
-
-  @media (max-width: $vp-768) {
+  @media (max-width: $vp-1024) {
     padding: 0 45px;
   }
 
-  @include vp-479 {
-    padding: 0 23px;
+  @media (max-width: $vp-767) {
+    padding: 0 33px;
   }
 
   @include vp-415 {
@@ -28,31 +20,7 @@
     padding: 0 45px;
   }
 
-  @include vp-479 {
+  @media (max-width: $vp-767) {
     padding: 0 15px;
-  }
-}
-
-.container--catalog {
-  padding: 0 118px;
-
-  @media (max-width: $vp-1162) {
-    padding: 0 98px;
-  }
-
-  @media (max-width: $vp-1036) {
-    padding: 0 64px;
-  }
-
-  @media (max-width: $vp-768) {
-    padding: 0 60px;
-  }
-
-  @include vp-479 {
-    padding: 0 33px;
-  }
-
-  @include vp-415 {
-    padding: 0 25px;
   }
 }
