@@ -22,7 +22,7 @@
 
   &:first-of-type {
     &::before {
-      background-image: url("../../img/sprite/icon-ship-big.svg");
+      background-image: url("../img/sprite/icon-ship-big.svg");
     }
   }
 
@@ -30,13 +30,13 @@
     padding-right: 46px;
 
     &::before {
-      background-image: url("../../img/sprite/icon-marks-big.svg");
+      background-image: url("../img/sprite/icon-marks-big.svg");
     }
   }
 
   &:last-of-type {
     &::before {
-      background-image: url("../../img/sprite/icon-boat-big.svg");
+      background-image: url("../img/sprite/icon-boat-big.svg");
     }
   }
 
@@ -52,7 +52,7 @@
     &:first-of-type {
       padding-right: 16px;
       &::before {
-        background-image: url("../../img/sprite/icon-ship-small.svg");
+        background-image: url("../img/sprite/icon-ship-small.svg");
       }
     }
 
@@ -60,13 +60,13 @@
       padding-right: 19px;
 
       &::before {
-        background-image: url("../../img/sprite/icon-marks-small.svg");
+        background-image: url("../img/sprite/icon-marks-small.svg");
       }
     }
 
     &:last-of-type {
       &::before {
-        background-image: url("../../img/sprite/icon-boat-small.svg");
+        background-image: url("../img/sprite/icon-boat-small.svg");
       }
     }
   }

@@ -1,29 +1,29 @@
 .booking {
   width: 100%;
 
-  background-image: url("../../img/booking-back-desktop.jpg");
+  background-image: url("../img/booking-back-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: $color-sky-blue;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/booking-back-desktop@2x.jpg");
+    background-image: url("../img/booking-back-desktop@2x.jpg");
   }
 
   @media (max-width: $vp-1024) {
-    background-image: url("../../img/booking-back-tablet.jpg");
+    background-image: url("../img/booking-back-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/booking-back-tablet@2x.jpg");
+      background-image: url("../img/booking-back-tablet@2x.jpg");
     }
   }
 
   @media (max-width: $vp-767) {
-    background-image: url("../../img/booking-back-mobile.jpg");
+    background-image: url("../img/booking-back-mobile.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/booking-back-mobile@2x.jpg");
+      background-image: url("../img/booking-back-mobile@2x.jpg");
     }
   }
 }
