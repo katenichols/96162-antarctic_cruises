@@ -12,11 +12,11 @@
     background-image: url("../img/main-back-desktop@2x.jpg");
   }
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     padding-top: 30px;
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     padding-top: 20px;
   }
 }
@@ -29,11 +29,11 @@
 
   background-color: $color-dark-cerulean;
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     padding-top: 30px;
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     display: block;
     width: 100%;
     padding-top: 20px;
@@ -41,7 +41,8 @@
 }
 
 .page-header--modal {
-  @media (max-width: $vp-767) {
+  @include vp-767 {
+    // height: 100%;
     padding-top: 42px;
   }
 }
@@ -65,18 +66,19 @@
 }
 
 .page-header__wrapper--no-js {
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     flex-direction: column;
     align-items: flex-start;
   }
 }
 
 .page-header__wrapper--modal {
-  @media (max-width: $vp-767) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
+  @include vp-767 {
+    // position: absolute;
+    // position: relative;
+    // top: 0;
+    // right: 0;
+    // z-index: 1;
 
     display: block;
     width: 285px;
@@ -93,11 +95,11 @@
   display: none;
   width: 70px;
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     width: 38px;
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     width: 42px;
   }
 }
@@ -108,12 +110,12 @@
   margin-right: 33px;
   vertical-align: middle;
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     width: 38px;
     margin-right: 23px;
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     width: 42px;
     margin-bottom: 33px;
   }

@@ -1,7 +1,8 @@
 .social {
   display: flex;
+  align-items: center;
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     margin-top: 2px;
   }
 }
@@ -13,7 +14,7 @@
     margin-right: 0;
   }
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     margin-right: 23px;
 
     &:last-of-type {
@@ -21,7 +22,7 @@
     }
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     margin-right: 19px;
 
     &:nth-of-type(2) {
@@ -33,7 +34,7 @@
 .social__item--first {
   margin-right: 29px;
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     margin-right: 20px;
   }
 }
@@ -45,7 +46,7 @@
 }
 
 .social__item--first a {
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     margin-left: -3px;
   }
 }
@@ -54,7 +55,7 @@
   width: 20px;
   height: 20px;
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     width: 16px;
     height: 16px;
     padding-top: 0;

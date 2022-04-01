@@ -5,7 +5,7 @@
   margin-left: 33px;
   align-items: center;
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     margin-left: 0;
   }
 }
@@ -15,20 +15,30 @@
 }
 
 .nav--opened {
+  min-height: 223px;
   padding-top: 33px;
 }
 
-.nav__btn {
-  position: absolute;
-  top: 0;
-  right: 0;
+.nav__overlay {
+  @include vp-767 {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+}
 
+.nav__btn {
   display: none;
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
+    position: absolute;
+    top: 0;
+    right: 0;
+
     display: block;
     width: 24px;
     height: 22px;
+    padding: 0;
 
     background-color: $color-transparent;
     border: none;
@@ -58,7 +68,7 @@
 }
 
 .nav__btn--no-js {
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     display: none;
 
     &::after {
@@ -68,10 +78,11 @@
 }
 
 .is-open {
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     top: -22px;
 
     width: 13px;
+    overflow: visible;
 
     background-image: url("../img/sprite/icon-close.svg");
     background-repeat: no-repeat;
@@ -87,35 +98,35 @@
   display: flex;
   flex-wrap: wrap;
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     display: none;
   }
 
   &--opened,
   &--no-js {
-    @media (max-width: $vp-767) {
+    @include vp-767 {
       display: block;
-      max-height: 453px;
-
+      height: 100vh;
       overflow-y: auto;
     }
   }
 
   &--no-js {
-    @media (max-width: $vp-767) {
+    @include vp-767 {
       padding-top: 0;
     }
   }
 }
 
 .nav__list-item {
+  display: block;
   margin-right: 33px;
 
   &:last-of-type {
     margin-right: 0;
   }
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     margin-right: 23px;
 
     &:last-of-type {
@@ -123,14 +134,14 @@
     }
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     margin-right: 0;
   }
 }
 
 .nav__list--no-js .nav__list-item,
 .nav__list--opened .nav__list-item {
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     margin-bottom: 10px;
     padding: 7px 10px 6px 10px;
 
@@ -146,16 +157,16 @@
   @include font-group-medium($size-16, $auto);
   color: $color-alice-blue;
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     @include font-group-small($size-14, $auto);
 
-    overflow: hidden;
+    overflow-x: hidden;
   }
 }
 
 .nav__list--no-js a,
 .nav__list--opened a {
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     @include font-group-small($size-18, $auto);
   }
 }

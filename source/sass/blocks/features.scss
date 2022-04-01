@@ -13,12 +13,12 @@
     background-image: url("../img/features-back@2x.jpg");
   }
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     padding-top: 90px;
     padding-bottom: 100px;
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     padding-top: 56px;
     padding-bottom: 65px;
   }
@@ -31,12 +31,12 @@
 
   @include font-group-semibold($size-28, $line-150);
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     margin-bottom: 50px;
     font-size: 26px;
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     margin-bottom: 31px;
 
     font-size: 24px;
@@ -49,12 +49,13 @@
   gap: 40px;
   justify-content: center;
 
-  @media (max-width: $vp-1024) {
-    grid-template-columns: repeat(auto-fill, 206px);
+  @include vp-1023 {
+    grid-template-columns: repeat(3, 206px);
     gap: 30px;
+    justify-content: space-around;
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     grid-template-columns: repeat(auto-fill, 290px);
     gap: 30px;
   }

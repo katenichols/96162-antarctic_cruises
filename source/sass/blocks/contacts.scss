@@ -3,19 +3,19 @@
   grid-template-columns: 560px 1fr;
   align-items: center;
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 118px;
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     grid-template-columns: 324px 1fr;
     padding-top: 100px;
     padding-bottom: 100px;
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     display: flex;
     flex-direction: column-reverse;
     padding-top: 58px;
-    padding-bottom: 64px;
+    padding-bottom: 63px;
   }
 }
 
@@ -35,7 +35,7 @@
     background-image: url("../img/content/map-desktop@2x.jpg");
   }
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     width: 324px;
     height: 335px;
 
@@ -46,7 +46,7 @@
     }
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     width: 100%;
     height: 316px;
 
@@ -63,32 +63,36 @@
   align-self: flex-start;
   padding: 74px 0 76px 100px;
 
-  @media (max-width: $vp-1024) {
+  @media (max-width: $vp-1210) {
+    padding-left: 15px;
+  }
+
+  @include vp-1023 {
     padding: 66px 0 46px 30px;
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     padding: 0 0 38px 0;
   }
 }
 
 .contacts h4 {
   margin-top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
 
   @include font-group-medium($size-18, $line-150);
   color: $color-tangaroa;
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     margin-bottom: 28px;
   }
 }
 
-.contacts p {
+.contacts__inner-wrapper p,
+.contacts__inner-wrapper a {
   position: relative;
 
   margin-top: 0;
-  margin-bottom: 22px;
   padding-left: 28px;
 
   @include font-group($size-16, $line-140);
@@ -106,31 +110,37 @@
     background-position: 0 center;
   }
 
-  @media (max-width: $vp-1024) {
-    margin-bottom: 24px;
-
+  @include vp-1023 {
     &::before {
       top: 4px;
     }
   }
 }
 
-.contacts p:nth-of-type(1) {
+.contacts__inner-wrapper p {
+  margin-bottom: 21px;
+
   &::before {
     background-image: url("../img/sprite/icon-map-mark.svg");
   }
+
+  @include vp-1023 {
+    margin-bottom: 21px;
+  }
 }
 
-.contacts p:nth-of-type(2) {
+.contacts__inner-wrapper a {
   margin-bottom: 0;
 
   &::before {
+    top: -3px;
+
     background-image: url("../img/sprite/icon-phone.svg");
   }
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     &::before {
-      top: -1px;
+      top: -3px;
     }
   }
 }

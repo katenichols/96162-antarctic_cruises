@@ -11,12 +11,12 @@
 
   background-color: $color-tangaroa;
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     margin: 0 auto;
     padding-top: 44px;
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     max-width: 403px;
     width: 100%;
     height: auto;
@@ -32,11 +32,11 @@
   @include font-group-medium($size-18, $line-150);
   color: $color-alice-blue;
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     margin-bottom: 27px;
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     width: 214px;
     margin: 0 auto 29px;
 
@@ -50,7 +50,7 @@
   margin-top: 0;
   margin-bottom: 20px;
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     width: 100%;
   }
 }
@@ -60,7 +60,7 @@
   margin-bottom: 32px;
   align-items: center;
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     margin-bottom: 26px;
   }
 }
@@ -89,7 +89,7 @@
     background-color: $color-alice-blue;
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     width: 175px;
     padding-top: 0;
     padding-left: 28px;
@@ -151,7 +151,7 @@
     cursor: pointer;
   }
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     padding-top: 11px;
     padding-bottom: 11px;
     text-align: center;

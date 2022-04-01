@@ -8,14 +8,14 @@
     column-gap: 50px;
   }
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     grid-template-columns: 1fr 324px;
     column-gap: 30px;
     padding-top: 100px;
     padding-bottom: 93px;
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     grid-template-columns: 1fr;
     padding: 65px 0;
     gap: 0;
@@ -34,11 +34,11 @@
   display: block;
   width: 560px;
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     width: 324px;
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     width: 100%;
   }
 }
@@ -49,7 +49,7 @@
   @include font-group-semibold($size-28, $line-150);
   color: $color-tangaroa;
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
     width: 205px;
     margin-top: -9px;
     margin-bottom: 15px;
@@ -57,7 +57,7 @@
     @include font-group-small($size-26, $line-140);
   }
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     margin-top: -8px;
     font-size: 24px;
   }
@@ -70,7 +70,7 @@
   @include font-group($size-16, $line-150);
   color: $color-tangaroa;
 
-  @media (max-width: $vp-767) {
+  @include vp-767 {
     max-width: 100%;
     margin-bottom: 34px;
   }

@@ -544,6 +544,14 @@ ul {
   padding: 0;
 }
 
+*:focus,
+*:focus-visible {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+  box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+  border-radius: 2px;
+}
+
 .wrapper {
   position: relative;
   display: -webkit-box;
@@ -702,13 +710,11 @@ ul {
 }
 
 .nav--opened {
+  min-height: 223px;
   padding-top: 33px;
 }
 
 .nav__btn {
-  position: absolute;
-  top: 0;
-  right: 0;
   display: none;
 }
 
@@ -725,6 +731,7 @@ ul {
 }
 
 .nav__list-item {
+  display: block;
   margin-right: 33px;
 }
 
@@ -759,9 +766,6 @@ ul {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   padding: 50px 0 51px 0;
 }
 
@@ -774,6 +778,8 @@ ul {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  margin-right: 40px;
+  padding-top: 6px;
 }
 
 .footer__nav-list {
@@ -807,6 +813,9 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .social__item {
@@ -1036,12 +1045,15 @@ ul {
   background-color: #011c40;
 }
 
-.card:hover > .card__content {
+.card:hover .card__content,
+.card:focus .card__content {
   display: none;
 }
 
-.card:hover > .card__description {
+.card:hover .card__description,
+.card:focus .card__description {
   display: block;
+  overflow: hidden;
 }
 
 .card__content picture {
@@ -1082,6 +1094,7 @@ ul {
 
 .card__description-list {
   width: 100%;
+  height: 233px;
   overflow-y: auto;
 }
 
@@ -1342,7 +1355,7 @@ ul {
   -ms-flex-align: center;
   align-items: center;
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 118px;
 }
 
 .contacts__map {
@@ -1364,7 +1377,7 @@ ul {
 
 .contacts h4 {
   margin-top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   font-family: "Montserrat Medium", "Trebuchet MS", "Helvetica", sans-serif;
   font-style: normal;
   font-size: 18px;
@@ -1373,10 +1386,10 @@ ul {
   color: #011c40;
 }
 
-.contacts p {
+.contacts__inner-wrapper p,
+.contacts__inner-wrapper a {
   position: relative;
   margin-top: 0;
-  margin-bottom: 22px;
   padding-left: 28px;
   font-family: "Montserrat", "Trebuchet MS", "Helvetica", sans-serif;
   font-style: normal;
@@ -1385,7 +1398,8 @@ ul {
   font-weight: 400;
 }
 
-.contacts p::before {
+.contacts__inner-wrapper p::before,
+.contacts__inner-wrapper a::before {
   content: "";
   position: absolute;
   left: 0;
@@ -1396,15 +1410,20 @@ ul {
   background-position: 0 center;
 }
 
-.contacts p:nth-of-type(1)::before {
+.contacts__inner-wrapper p {
+  margin-bottom: 21px;
+}
+
+.contacts__inner-wrapper p::before {
   background-image: url("../img/sprite/icon-map-mark.svg");
 }
 
-.contacts p:nth-of-type(2) {
+.contacts__inner-wrapper a {
   margin-bottom: 0;
 }
 
-.contacts p:nth-of-type(2)::before {
+.contacts__inner-wrapper a::before {
+  top: -3px;
   background-image: url("../img/sprite/icon-phone.svg");
 }
 
@@ -1569,9 +1588,13 @@ ul {
   .journeys__inner-wrapper {
     padding-top: 0;
   }
+
+  .contacts__inner-wrapper {
+    padding-left: 15px;
+  }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .container {
     padding: 0 45px;
   }
@@ -1604,17 +1627,22 @@ ul {
   .nav a {
     font-size: 14px;
     line-height: 1.22;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   .footer__wrapper {
-    padding: 45px 0 46px 0;
+    padding: 45px 0 42px 0;
   }
 
   .footer picture {
     width: 38px;
-    margin-top: 2px;
+    margin-top: 5px;
     margin-right: 25px;
+  }
+
+  .footer__nav {
+    margin-right: 25px;
+    padding-top: 0;
   }
 
   .footer__nav-list-item {
@@ -1699,8 +1727,11 @@ ul {
   }
 
   .features__list {
-    grid-template-columns: repeat(auto-fill, 206px);
+    -ms-grid-columns: (206px)[3];
+    grid-template-columns: repeat(3, 206px);
     gap: 30px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
   }
 
   .feature {
@@ -1842,20 +1873,21 @@ ul {
     margin-bottom: 28px;
   }
 
-  .contacts p {
-    margin-bottom: 24px;
-  }
-
-  .contacts p::before {
+  .contacts__inner-wrapper p::before,
+  .contacts__inner-wrapper a::before {
     top: 4px;
   }
 
-  .contacts p:nth-of-type(2)::before {
-    top: -1px;
+  .contacts__inner-wrapper p {
+    margin-bottom: 21px;
+  }
+
+  .contacts__inner-wrapper a::before {
+    top: -3px;
   }
 }
 
-@media (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1024px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1024px) and (min-resolution: 2dppx) {
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
   .booking {
     background-image: url("../img/booking-back-tablet@2x.jpg");
   }
@@ -1905,10 +1937,6 @@ ul {
   }
 
   .page-header__wrapper--modal {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
     display: block;
     width: 285px;
     height: 100%;
@@ -1931,10 +1959,20 @@ ul {
     margin-left: 0;
   }
 
+  .nav__overlay {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+
   .nav__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
     display: block;
     width: 24px;
     height: 22px;
+    padding: 0;
     background-color: rgba(255, 255, 255, 0);
     border: none;
   }
@@ -1963,6 +2001,7 @@ ul {
   .is-open {
     top: -22px;
     width: 13px;
+    overflow: visible;
     background-image: url("../img/sprite/icon-close.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -1979,7 +2018,7 @@ ul {
   .nav__list--opened,
   .nav__list--no-js {
     display: block;
-    max-height: 453px;
+    height: 100vh;
     overflow-y: auto;
   }
 
@@ -2016,13 +2055,17 @@ ul {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    padding: 38px 0 36px 0;
+    padding: 35px 0 36px 0;
   }
 
   .footer picture {
     width: 42px;
     margin-right: 0;
     margin-bottom: 27px;
+  }
+
+  .footer__nav {
+    margin-right: 0;
   }
 
   .footer__nav-list {
@@ -2242,7 +2285,7 @@ ul {
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     padding-top: 58px;
-    padding-bottom: 64px;
+    padding-bottom: 63px;
   }
 
   .contacts__map {

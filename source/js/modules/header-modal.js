@@ -17,16 +17,18 @@ const onNavLinkClick = () => {
 firstFocusable.focus();
 
 document.addEventListener('keydown', (evt) => {
-  if (evt.key === 'Tab') {
-    if (evt.shiftKey) {
-      if (document.activeElement === firstFocusable) {
-        lastFocusable.focus();
-        evt.preventDefault();
-      }
-    } else {
-      if (document.activeElement === lastFocusable) {
-        firstFocusable.focus();
-        evt.preventDefault();
+  if (pageHeaderWrapper.classList.contains('page-header__wrapper--modal')) {
+    if (evt.key === 'Tab') {
+      if (evt.shiftKey) {
+        if (document.activeElement === firstFocusable) {
+          lastFocusable.focus();
+          evt.preventDefault();
+        }
+      } else {
+        if (document.activeElement === lastFocusable) {
+          firstFocusable.focus();
+          evt.preventDefault();
+        }
       }
     }
   }

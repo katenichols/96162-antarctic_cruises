@@ -47,7 +47,8 @@ labelCheckbox.addEventListener('click', () => {
 });
 
 const isPhone = () => {
-  const regPhone = /^\d[\d\(\)\ -]{4,14}\d$/;
+  // const regPhone = /^\d[\d\(\)\ -]{4,14}\d$/;
+  const regPhone = /(?:\+|\d)[\d\-\(\) ]{9,}\d/g;
   return regPhone.test(inputPhone.value);
 };
 
