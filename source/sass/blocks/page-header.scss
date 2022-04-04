@@ -35,14 +35,15 @@
 
   @include vp-767 {
     display: block;
-    width: 100%;
+    // width: 100%;
     padding-top: 20px;
   }
 }
 
 .page-header--modal {
   @include vp-767 {
-    // height: 100%;
+    // height: 100vh;
+    // max-height: 100vh;
     padding-top: 42px;
   }
 }
@@ -74,18 +75,18 @@
 
 .page-header__wrapper--modal {
   @include vp-767 {
-    // position: absolute;
-    // position: relative;
-    // top: 0;
-    // right: 0;
-    // z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
 
     display: block;
     width: 285px;
     height: 100%;
     margin-right: 0;
     margin-left: auto;
-    padding: 20px 15px;
+    padding: 0 20px 15px;
+    // overflow: hidden;
 
     background-color: $color-alice-blue;
   }
@@ -122,5 +123,9 @@
 }
 
 .page-header__picture-modal {
-  margin-bottom: 33px;
+  position: absolute;
+  top: 20px;
+  right: 228px;
+  z-index: 100;
+  // margin-bottom: 33px;
 }

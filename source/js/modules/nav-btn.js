@@ -21,9 +21,11 @@ export const classListsToggle = () => {
   if (!pageHeader.classList.contains('page-header--modal')) {
     body.style.position = 'fixed';
     body.style.top = '0';
+    // body.style.transform = 'translate3d(0, 0, 0)';
   } else {
     body.style.position = 'relative';
     body.style.top = 'auto';
+    // body.style.transform = 'translate3d(0, 0, 0)';
   }
   pageHeader.classList.toggle('page-header--modal');
   pageHeaderOverlay.classList.toggle('page-header__overlay--modal');

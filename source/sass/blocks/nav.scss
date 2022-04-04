@@ -16,15 +16,9 @@
 
 .nav--opened {
   min-height: 223px;
-  padding-top: 33px;
-}
-
-.nav__overlay {
-  @include vp-767 {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-  }
+  // height: 100vh;
+  padding-top: 75px;
+  // overflow: hidden;
 }
 
 .nav__btn {
@@ -79,10 +73,11 @@
 
 .is-open {
   @include vp-767 {
-    top: -22px;
+    top: 18px;
+    right: 2px;
 
     width: 13px;
-    overflow: visible;
+    // overflow: visible;
 
     background-image: url("../img/sprite/icon-close.svg");
     background-repeat: no-repeat;
@@ -92,6 +87,24 @@
       display: none;
     }
   }
+}
+
+.nav__overlay {
+  @include vp-767 {
+    position: relative;
+
+    display: block;
+    width: 100%;
+  }
+}
+
+.nav--opened .nav__overlay {
+  @include vp-767 {
+    max-height: 100vh;
+    overflow-y: auto;
+    // overflow: hidden;
+  }
+
 }
 
 .nav__list {
@@ -106,8 +119,7 @@
   &--no-js {
     @include vp-767 {
       display: block;
-      height: 100vh;
-      overflow-y: auto;
+      min-height: 190px;
     }
   }
 
@@ -145,9 +157,9 @@
     margin-bottom: 10px;
     padding: 7px 10px 6px 10px;
 
-    &:last-of-type {
-      margin-bottom: 0;
-    }
+    // &:last-of-type {
+    //   margin-bottom: 0;
+    // }
   }
 }
 

@@ -562,10 +562,8 @@ ul {
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   /* stylelint-disable-next-line */
-  min-height: calc(100 * var(--vh, 1vh));
-  overflow: hidden;
 }
 
 .wrapper .header,
@@ -691,7 +689,10 @@ ul {
 }
 
 .page-header__picture-modal {
-  margin-bottom: 33px;
+  position: absolute;
+  top: 20px;
+  right: 228px;
+  z-index: 100;
 }
 
 .nav {
@@ -711,7 +712,7 @@ ul {
 
 .nav--opened {
   min-height: 223px;
-  padding-top: 33px;
+  padding-top: 75px;
 }
 
 .nav__btn {
@@ -1918,7 +1919,6 @@ ul {
 
   .page-header--no-js {
     display: block;
-    width: 100%;
     padding-top: 20px;
   }
 
@@ -1937,12 +1937,16 @@ ul {
   }
 
   .page-header__wrapper--modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
     display: block;
     width: 285px;
     height: 100%;
     margin-right: 0;
     margin-left: auto;
-    padding: 20px 15px;
+    padding: 0 20px 15px;
     background-color: #f9fbfd;
   }
 
@@ -1957,12 +1961,6 @@ ul {
 
   .nav {
     margin-left: 0;
-  }
-
-  .nav__overlay {
-    display: block;
-    width: 100%;
-    overflow: hidden;
   }
 
   .nav__btn {
@@ -1999,9 +1997,9 @@ ul {
   }
 
   .is-open {
-    top: -22px;
+    top: 18px;
+    right: 2px;
     width: 13px;
-    overflow: visible;
     background-image: url("../img/sprite/icon-close.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -2011,6 +2009,17 @@ ul {
     display: none;
   }
 
+  .nav__overlay {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+
+  .nav--opened .nav__overlay {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
   .nav__list {
     display: none;
   }
@@ -2018,8 +2027,7 @@ ul {
   .nav__list--opened,
   .nav__list--no-js {
     display: block;
-    height: 100vh;
-    overflow-y: auto;
+    min-height: 190px;
   }
 
   .nav__list--no-js {
@@ -2034,11 +2042,6 @@ ul {
   .nav__list--opened .nav__list-item {
     margin-bottom: 10px;
     padding: 7px 10px 6px 10px;
-  }
-
-  .nav__list--no-js .nav__list-item:last-of-type,
-  .nav__list--opened .nav__list-item:last-of-type {
-    margin-bottom: 0;
   }
 
   .nav__list--no-js a,
