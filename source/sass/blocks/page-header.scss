@@ -35,15 +35,13 @@
 
   @include vp-767 {
     display: block;
-    // width: 100%;
+    width: 100%;
     padding-top: 20px;
   }
 }
 
 .page-header--modal {
   @include vp-767 {
-    // height: 100vh;
-    // max-height: 100vh;
     padding-top: 42px;
   }
 }
@@ -82,11 +80,11 @@
 
     display: block;
     width: 285px;
-    height: 100%;
+    height: 100vh;
     margin-right: 0;
     margin-left: auto;
     padding: 0 20px 15px;
-    // overflow: hidden;
+    overflow-y: auto;
 
     background-color: $color-alice-blue;
   }
@@ -127,5 +125,4 @@
   top: 20px;
   right: 228px;
   z-index: 100;
-  // margin-bottom: 33px;
 }

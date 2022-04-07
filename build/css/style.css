@@ -1042,19 +1042,21 @@ ul {
   display: none;
   width: 260px;
   height: 386px;
-  padding: 28px 25px 75px 25px;
+  padding: 28px 25px 35px 25px;
   background-color: #011c40;
 }
 
 .card:hover .card__content,
-.card:focus .card__content {
+.card:focus .card__content,
+.card:focus-within .card__content {
   display: none;
 }
 
 .card:hover .card__description,
-.card:focus .card__description {
+.card:focus .card__description,
+.card:focus-within .card__description {
   display: block;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .card__content picture {
@@ -1095,8 +1097,7 @@ ul {
 
 .card__description-list {
   width: 100%;
-  height: 233px;
-  overflow-y: auto;
+  margin-bottom: 24px;
 }
 
 .card__description-list-item {
@@ -1105,7 +1106,7 @@ ul {
 }
 
 .card__description-list-item:last-of-type {
-  margin-bottom: 24px;
+  margin-bottom: 0;
 }
 
 .card__description-list-item p {
@@ -1134,11 +1135,8 @@ ul {
 }
 
 .card__description a {
-  position: absolute;
-  bottom: 35px;
-  left: 25px;
   display: block;
-  width: 210px;
+  width: 100%;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 9px;
@@ -1258,12 +1256,26 @@ ul {
   background-color: #f9fbfd;
 }
 
+.form input[type="text"]:focus,
+.form input[type="tel"]:focus,
+.form input[type="email"]:focus {
+  -webkit-box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+  box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+  border-radius: 2px;
+}
+
 .form input[type="checkbox"]:hover + label {
   cursor: pointer;
 }
 
 .form input[type="checkbox"]:checked + label::before {
   background-image: url("../img/sprite/icon-checkbox-mark.svg");
+}
+
+.form input[type="checkbox"]:focus + label::before {
+  -webkit-box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+  box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+  border-radius: 2px;
 }
 
 .form input {
@@ -1793,17 +1805,15 @@ ul {
 
   .card__description {
     width: 309px;
-    padding: 29px 35px 75px 35px;
+    padding: 29px 35px 35px 35px;
   }
 
   .card__content img {
     width: 309px;
   }
 
-  .card__description a {
-    bottom: 35px;
-    left: 35px;
-    width: 239px;
+  .card__description-list {
+    margin-bottom: 23px;
   }
 
   .booking {
@@ -1919,6 +1929,7 @@ ul {
 
   .page-header--no-js {
     display: block;
+    width: 100%;
     padding-top: 20px;
   }
 
@@ -1943,10 +1954,11 @@ ul {
     z-index: 1;
     display: block;
     width: 285px;
-    height: 100%;
+    height: 100vh;
     margin-right: 0;
     margin-left: auto;
     padding: 0 20px 15px;
+    overflow-y: auto;
     background-color: #f9fbfd;
   }
 
@@ -2015,11 +2027,6 @@ ul {
     width: 100%;
   }
 
-  .nav--opened .nav__overlay {
-    max-height: 100vh;
-    overflow-y: auto;
-  }
-
   .nav__list {
     display: none;
   }
@@ -2027,7 +2034,6 @@ ul {
   .nav__list--opened,
   .nav__list--no-js {
     display: block;
-    min-height: 190px;
   }
 
   .nav__list--no-js {
@@ -2042,6 +2048,11 @@ ul {
   .nav__list--opened .nav__list-item {
     margin-bottom: 10px;
     padding: 7px 10px 6px 10px;
+  }
+
+  .nav__list--no-js .nav__list-item:last-of-type,
+  .nav__list--opened .nav__list-item:last-of-type {
+    margin-bottom: 0;
   }
 
   .nav__list--no-js a,
@@ -2205,17 +2216,18 @@ ul {
   .card__description {
     position: relative;
     width: 270px;
-    padding-top: 29px;
-    padding-left: 25px;
+    padding: 29px 25px 35px 25px;
   }
 
   .card__content img {
     width: 270px;
   }
 
+  .card__description-list {
+    margin-bottom: 24px;
+  }
+
   .card__description a {
-    left: 25px;
-    width: 220px;
     padding-top: 10px;
     padding-bottom: 9px;
   }

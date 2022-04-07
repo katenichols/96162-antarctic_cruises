@@ -104,6 +104,13 @@
   }
 }
 
+.form input[type="text"]:focus,
+.form input[type="tel"]:focus,
+.form input[type="email"]:focus {
+  box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+  border-radius: 2px;
+}
+
 .form input[type="checkbox"]:hover + label {
   cursor: pointer;
 }
@@ -111,6 +118,13 @@
 .form input[type="checkbox"]:checked + label {
   &::before {
     background-image: url("../img/sprite/icon-checkbox-mark.svg");
+  }
+}
+
+.form input[type="checkbox"]:focus + label {
+  &::before {
+    box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+    border-radius: 2px;
   }
 }
 

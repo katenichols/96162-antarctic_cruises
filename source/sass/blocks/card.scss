@@ -20,33 +20,34 @@
   display: none;
   width: 260px;
   height: 386px;
-  padding: 28px 25px 75px 25px;
+  padding: 28px 25px 35px 25px;
 
   background-color: $color-tangaroa;
 
   @include vp-1023 {
     width: 309px;
-    padding: 29px 35px 75px 35px;
+    padding: 29px 35px 35px 35px;
   }
 
   @include vp-767 {
     position: relative;
 
     width: 270px;
-    padding-top: 29px;
-    padding-left: 25px;
+    padding: 29px 25px 35px 25px;
   }
 }
 
 .card:hover .card__content,
-.card:focus .card__content {
+.card:focus .card__content,
+.card:focus-within .card__content {
   display: none;
 }
 
 .card:hover .card__description,
-.card:focus .card__description {
+.card:focus .card__description,
+.card:focus-within .card__description {
   display: block;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .card__content picture {
@@ -91,18 +92,24 @@
 
 .card__description-list {
   width: 100%;
-  height: 233px;
-  overflow-y: auto;
+  margin-bottom: 24px;
+
+  @include vp-1023 {
+    margin-bottom: 23px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 24px;
+  }
 }
 
 .card__description-list-item {
-
   margin-top: 0;
   margin-bottom: 11px;
 
 
   &:last-of-type {
-    margin-bottom: 24px;
+    margin-bottom: 0;
   }
 }
 
@@ -124,12 +131,8 @@
 }
 
 .card__description a {
-  position: absolute;
-  bottom: 35px;
-  left: 25px;
-
   display: block;
-  width: 210px;
+  width: 100%;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 9px;
@@ -139,17 +142,7 @@
 
   background-color: $color-alice-blue;
 
-  @include vp-1023 {
-    bottom: 35px;
-    left: 35px;
-
-    width: 239px;
-  }
-
   @include vp-767 {
-    left: 25px;
-
-    width: 220px;
     padding-top: 10px;
     padding-bottom: 9px;
   }
