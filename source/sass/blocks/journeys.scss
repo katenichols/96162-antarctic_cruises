@@ -1,6 +1,6 @@
 .journeys__wrapper {
   display: grid;
-  grid-template-columns: 1fr 560px;
+  grid-template-columns: 520px 1fr;
   column-gap: 80px;
   padding: 120px 0;
 
@@ -30,9 +30,14 @@
   }
 }
 
+.journeys__wrapper picture {
+  display: grid;
+}
+
 .journeys__wrapper img {
   display: block;
   width: 560px;
+  align-items: center;
 
   @include vp-1023 {
     width: 324px;
