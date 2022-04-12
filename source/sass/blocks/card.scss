@@ -37,11 +37,15 @@
   }
 }
 
-.card:hover .card__content {
+.card:hover .card__content,
+.card:focus .card__content,
+.card:focus-within .card__content {
   display: none;
 }
 
-.card:hover .card__description {
+.card:hover .card__description,
+.card:focus .card__description,
+.card:focus-within .card__description {
   display: block;
   overflow-y: auto;
 }
