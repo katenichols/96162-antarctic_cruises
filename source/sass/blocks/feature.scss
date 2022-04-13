@@ -50,6 +50,7 @@
 
     &:first-of-type {
       padding-right: 16px;
+
       &::before {
         background-image: url("../img/sprite/icon-ship-small.svg");
       }
